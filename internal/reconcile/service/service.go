@@ -3,7 +3,7 @@ package service
 import (
 	"math"
 	"strings"
-
+	"sort"
 	"recon-service/internal/reconcile/model"
 )
 
@@ -41,7 +41,9 @@ func Run(a, b []model.Row, opt model.Options) model.Result {
 	for i := range b {
 		b[i].NameNorm = normalize(b[i].Name, opt)
 	}
-
+	if opt.Threshold < 0.999 && !opt.EnableFuzzy {
+			opt.EnableFuzzy = true
+	}
 	// 2) Агрегация дублей
 	a = aggregate(a, opt)
 	b = aggregate(b, opt)
@@ -82,26 +84,39 @@ func Run(a, b []model.Row, opt model.Options) model.Result {
 			}
 		}
 
-		// (3) Fuzzy (если разрешён и НЕ strict-after-norm)
-		// (3) Fuzzy (если разрешён и НЕ strict-after-norm)
-if matched == nil && opt.EnableFuzzy && !opt.StrictAfterNorm && strings.TrimSpace(ar.NameNorm) != "" {
-	bestName := ""
+
+ if matched == nil && opt.EnableFuzzy && !opt.StrictAfterNorm && strings.TrimSpace(ar.NameNorm) != "" {
+		bestName := ""
 	best := -1.0
 
 	nuA := extractNumUnits(ar.NameNorm) // пары "число+единица" из A
 
-	for _, candName := range candidateNames(idxB, ar.NameNorm) {
-		// ГАРД: пары "число+единица" должны совпасть
-		if !equalNumUnits(nuA, extractNumUnits(candName)) {
-			continue
-		}
-		s := bestSimilarity(ar.NameNorm, candName)
-		if s > best {
-			best = s
-			bestName = candName
-		}
-	}
-	if bestName != "" && best >= opt.Threshold {
+for _, candName := range idxB.candidateNames(ar.NameNorm) {
+    candNorm := normalize(candName, opt) // <— нормализуем
+    // Гард по единицам С НОРМАЛИЗОВАННЫМ candName
+    if !equalNumUnitsSoft(nuA, extractNumUnits(candNorm)) {
+        continue
+    }
+    // И score считаем по нормализованным строкам
+    s := bestSimilarity(ar.NameNorm, candNorm)
+    if s > best { best = s; bestName = candName } // ключ оставляем исходный
+}
+	// Fallback: если индекс не дал кандидатов, пройтись по именам, отфильтрованным по единицам
+if bestName == "" || best < opt.Threshold {
+    for candName := range idxB.byName {
+        candNorm := normalize(candName, opt)
+        if !equalNumUnitsSoft(nuA, extractNumUnits(candNorm)) { continue }
+        s := bestSimilarity(ar.NameNorm, candNorm)
+        if s > best { best = s; bestName = candName } // ключ оставляем
+    }
+}
+
+
+	    // soft-pass: allow slightly below threshold when num-units nearly match
+   softPass := best >= opt.Threshold ||
+    (bestName != "" && best >= opt.Threshold-0.02 &&
+        equalNumUnitsSoft(nuA, extractNumUnits(normalize(bestName, opt))))
+    if bestName != "" && softPass {
 		if list, ok := idxB.byName[bestName]; ok && len(list) > 0 {
 			if m := chooseBest(list, ar, usedB); m != nil {
 				matched = m
@@ -111,6 +126,7 @@ if matched == nil && opt.EnableFuzzy && !opt.StrictAfterNorm && strings.TrimSpac
 			}
 		}
 	}
+
 }
 
 
@@ -206,14 +222,21 @@ func markUsed(used map[string]bool, r *model.Row) {
 	}
 }
 // сравнение отсортированных мультимножеств "число+единица"
-func equalNumUnits(a, b []string) bool {
-	if len(a) != len(b) {
-		return false
-	}
-	for i := range a {
-		if a[i] != b[i] {
-			return false
-		}
-	}
-	return true
+func equalNumUnitsSoft(a, b []string) bool {
+    // канонизируем десятичный разделитель
+    for i := range a { a[i] = strings.ReplaceAll(a[i], ",", ".") }
+    for i := range b { b[i] = strings.ReplaceAll(b[i], ",", ".") }
+
+    ac, bc := append([]string(nil), a...), append([]string(nil), b...)
+    sort.Strings(ac); sort.Strings(bc)
+    if len(ac) > len(bc)+1 { return false }
+    i, j, miss := 0, 0, 0
+    for i < len(ac) && j < len(bc) {
+        if ac[i] == bc[j] { i++; j++; continue }
+        miss++; if miss > 1 { return false }
+        if ac[i] < bc[j] { i++ } else { j++ }
+    }
+    miss += (len(ac)-i) + (len(bc)-j)
+    return miss <= 1
 }
+

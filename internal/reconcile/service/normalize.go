@@ -12,6 +12,7 @@ import (
 var lookalikes = map[rune]rune{
 	'A': 'А', 'B': 'В', 'C': 'С', 'E': 'Е', 'H': 'Н', 'K': 'К', 'M': 'М', 'O': 'О', 'P': 'Р', 'T': 'Т', 'X': 'Х', 'Y': 'У',
 	'a': 'а', 'c': 'с', 'e': 'е', 'o': 'о', 'p': 'р', 'x': 'х',
+  'm':'м', 'L':'Л', 'l':'л', 'y':'у', 'k':'к',
 }
 
 // Разрешаем буквы/цифры/пробелы + десятичные разделители и проценты
@@ -30,14 +31,14 @@ var reAttachNumUnit = regexp.MustCompile(`(?i)\b(\d+(?:[.,]\d+)?)(\s*)(` + unitW
 // (склеенные пары "48мм" не затрагиваются)
 var reUnitTokens = regexp.MustCompile(`(?i)\b(` + unitWord + `)\b`)
 
-// Поиск склеенных пар для гарда fuzzy: ["48мм", "66м", "3.2%"]
-var reNumUnitFind = regexp.MustCompile(`(?i)\d+(?:\.\d+)?(?:` + unitWord + `)`)
 
+var numUnitRx = regexp.MustCompile(`(?i)(\d+(?:[.,]\d+)?)\s*(мм|см|мл|л|кг|г|шт|%)\b`)
 // === normalize — главный конвейер ===
 func normalize(s string, opt model.Options) string {
 	if s == "" {
 		return ""
 	}
+	s = numUnitRx.ReplaceAllString(s, `$1$2`)
 	out := s
 
 	// 1) Унификация символов: ё→е, лат↔кир, спец-разделители → пробел
@@ -63,7 +64,11 @@ func normalize(s string, opt model.Options) string {
 	// 5) СКЛЕЙКА "число + единица": "48 мм"→"48мм", "3.2 %"→"3.2%"
 	out = attachNumberUnitsEverywhere(out)
 
-	// 6) Опционально удаляем ОТДЕЛЬНЫЕ единицы (склеенные не трогаем)
+
+	// 6a) Убираем слабые слова, не несущие номенклатурный смысл
+	weakRx := regexp.MustCompile(`(?i)\b(тара|упаковоч\w*|уп\.)\b`)
+	out = weakRx.ReplaceAllString(out, " ")
+// 6) Опционально удаляем ОТДЕЛЬНЫЕ единицы (склеенные не трогаем)
 	if opt.StripUnits {
 		out = stripUnitTokens(out)
 	}
@@ -105,16 +110,8 @@ func removePunctToSpaces(s string) string {
 }
 // Итеративная СКЛЕЙКА "число + единица" по всей строке
 func attachNumberUnitsEverywhere(s string) string {
-	prev := ""
-	out := collapseSpaces(s)
-	for out != prev {
-		prev = out
-		out = reAttachNumUnit.ReplaceAllString(out, "$1$3")
-		out = collapseSpaces(out)
-	}
-	return out
+    return extractNumUnitRx.ReplaceAllString(s, "$1$2")
 }
-
 // Убираем ЕДИНИЦЫ, если они стоят ОТДЕЛЬНЫМИ токенами
 // (склеенные пары типа "48мм" остаются)
 func stripUnitTokens(s string) string {
@@ -134,8 +131,16 @@ func collapseSpaces(s string) string {
 }
 
 // Мультимножество склеенных "число+единица" для гарда fuzzy (используй в service.go)
+var extractNumUnitRx = regexp.MustCompile(`(?i)(\d+(?:[.,]\d+)?)\s*(мм|см|мл|л|м|кг|г|шт|%)`)
+
 func extractNumUnits(s string) []string {
-	mm := reNumUnitFind.FindAllString(s, -1)
-	sort.Strings(mm)
-	return mm
+    xs := extractNumUnitRx.FindAllStringSubmatch(s, -1)
+    out := make([]string, 0, len(xs))
+    for _, m := range xs {
+        num := strings.ReplaceAll(m[1], ",", ".") // <— приводим 0,5 → 0.5
+        unit := strings.ToLower(m[2])
+        out = append(out, num+unit)
+    }
+    sort.Strings(out)
+    return out
 }

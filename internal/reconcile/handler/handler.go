@@ -83,16 +83,20 @@ func Reconcile(cfg config.Config, logger zerolog.Logger) http.HandlerFunc {
 		}
 
 		// Опции (дефолты чекбоксов = false)
-		opt := model.Options{
-			Normalization:   toBool(r.FormValue("normalization"), false),
-			TokenSort:       toBool(r.FormValue("token_sort"), false),
-			StripUnits:      toBool(r.FormValue("strip_units"), false),
-			Unify:           toBool(r.FormValue("unify"), false),
-			Lowercase:       toBool(r.FormValue("lowercase"), false),
-			EnableFuzzy:     toBool(r.FormValue("enable_fuzzy"), false),
-			StrictAfterNorm: toBool(r.FormValue("strict_after_norm"), false),
-			Threshold:       toFloat(r.FormValue("threshold"), 0.85),
-		}
+// handler.go
+opt := model.Options{
+    Normalization:   toBool(r.FormValue("normalization"), true),
+    TokenSort:       toBool(r.FormValue("token_sort"), true),
+    StripUnits:      toBool(r.FormValue("strip_units"), false),
+    Unify:           toBool(r.FormValue("unify"), true),
+    Lowercase:       toBool(r.FormValue("lowercase"), true),
+    EnableFuzzy:     toBool(r.FormValue("enable_fuzzy"), true) ||
+                     toBool(r.FormValue("fuzzy"), true) ||
+                     toBool(r.FormValue("fuzzy_search"), true),
+    StrictAfterNorm: toBool(r.FormValue("strict_after_norm"), false),
+    Threshold:       toFloat(r.FormValue("threshold"), 0.83),
+}
+
 
 		// В модельные строки + фильтр шапок
 		aRows := toRowsFiltered(rowsA, ma)

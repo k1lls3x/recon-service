@@ -459,3 +459,76 @@
 {"level":"info","rid":"0d2a4e41-8f5d-4e6b-a29c-209f368d1a68","method":"POST","path":"/reconcile","status":200,"dur":3.2625,"size":2407,"time":"2025-09-25T19:05:28+03:00","message":"http"}
 {"level":"info","rowsA":10,"rowsB":10,"elapsed":2.3068,"time":"2025-09-25T19:05:44+03:00","message":"reconcile done"}
 {"level":"info","rid":"39c3974a-705a-4b54-af6c-094ac341340e","method":"POST","path":"/reconcile","status":200,"dur":2.8247,"size":2407,"time":"2025-09-25T19:05:44+03:00","message":"http"}
+{"level":"info","time":"2025-09-25T19:23:33+03:00","message":"server shutting down"}
+{"level":"info","time":"2025-09-25T19:23:33+03:00","message":"bye"}
+{"level":"info","addr":"127.0.0.1:8082","time":"2025-09-25T19:36:00+03:00","message":"server starting"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":3.6598,"time":"2025-09-25T19:36:09+03:00","message":"reconcile done"}
+{"level":"info","rid":"e5073b45-5c34-4ce5-997d-c5ab54b5641e","method":"POST","path":"/reconcile","status":200,"dur":4.1718,"size":2535,"time":"2025-09-25T19:36:09+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":2.6138,"time":"2025-09-25T19:36:22+03:00","message":"reconcile done"}
+{"level":"info","rid":"51786699-2e43-49eb-b829-84e72a2198b6","method":"POST","path":"/reconcile","status":200,"dur":2.6138,"size":2534,"time":"2025-09-25T19:36:22+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":3.1467,"time":"2025-09-25T19:36:24+03:00","message":"reconcile done"}
+{"level":"info","rid":"bef36ae1-29ac-48b1-b983-f6990d7bb9cc","method":"POST","path":"/reconcile","status":200,"dur":3.1467,"size":2534,"time":"2025-09-25T19:36:24+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":2.3271,"time":"2025-09-25T19:36:27+03:00","message":"reconcile done"}
+{"level":"info","rid":"68c8eb3f-d6b5-46b9-b0db-227713bc5c93","method":"POST","path":"/reconcile","status":200,"dur":2.3271,"size":2535,"time":"2025-09-25T19:36:27+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":3.7052,"time":"2025-09-25T19:38:49+03:00","message":"reconcile done"}
+{"level":"info","rid":"7d42699c-ac35-4660-8771-c09ee8083dca","method":"POST","path":"/reconcile","status":200,"dur":3.7052,"size":2517,"time":"2025-09-25T19:38:49+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":2.5631,"time":"2025-09-25T19:45:45+03:00","message":"reconcile done"}
+{"level":"info","rid":"d473b6f5-ec62-4ac3-9cad-96676242cac8","method":"POST","path":"/reconcile","status":200,"dur":3.0806,"size":2520,"time":"2025-09-25T19:45:45+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":2.6253,"time":"2025-09-25T19:45:47+03:00","message":"reconcile done"}
+{"level":"info","rid":"8565e1eb-a91e-4d2e-8c51-2ff4c5fe2659","method":"POST","path":"/reconcile","status":200,"dur":3.1417,"size":2520,"time":"2025-09-25T19:45:47+03:00","message":"http"}
+{"level":"info","time":"2025-09-25T19:50:15+03:00","message":"server shutting down"}
+{"level":"info","time":"2025-09-25T19:50:15+03:00","message":"bye"}
+{"level":"info","addr":"127.0.0.1:8082","time":"2025-09-25T19:50:17+03:00","message":"server starting"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":5.7868,"time":"2025-09-25T19:50:27+03:00","message":"reconcile done"}
+{"level":"info","rid":"6ad16c5e-c6b6-4656-8608-e7465dd69695","method":"POST","path":"/reconcile","status":200,"dur":5.7868,"size":2520,"time":"2025-09-25T19:50:27+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":2.6676,"time":"2025-09-25T19:50:41+03:00","message":"reconcile done"}
+{"level":"info","rid":"0b6fbc70-e0f0-4991-aaed-bae9e1561665","method":"POST","path":"/reconcile","status":200,"dur":2.6676,"size":2520,"time":"2025-09-25T19:50:41+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":3.124,"time":"2025-09-25T19:51:06+03:00","message":"reconcile done"}
+{"level":"info","rid":"bd6259f6-594b-44c3-9cf0-99208a4ee8a3","method":"POST","path":"/reconcile","status":200,"dur":3.124,"size":2520,"time":"2025-09-25T19:51:06+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":2.6004,"time":"2025-09-25T19:55:32+03:00","message":"reconcile done"}
+{"level":"info","rid":"bb9da965-f84a-485b-87dc-096857dccf3c","method":"POST","path":"/reconcile","status":200,"dur":2.6004,"size":2521,"time":"2025-09-25T19:55:32+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":2.5896,"time":"2025-09-25T19:55:40+03:00","message":"reconcile done"}
+{"level":"info","rid":"ab9d790a-3be4-43df-8411-e140b6043fa4","method":"POST","path":"/reconcile","status":200,"dur":3.1002,"size":2521,"time":"2025-09-25T19:55:40+03:00","message":"http"}
+{"level":"info","time":"2025-09-25T20:46:41+03:00","message":"server shutting down"}
+{"level":"info","time":"2025-09-25T20:46:41+03:00","message":"bye"}
+{"level":"info","addr":"127.0.0.1:8082","time":"2025-09-25T20:46:47+03:00","message":"server starting"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":4.3513,"time":"2025-09-25T20:47:04+03:00","message":"reconcile done"}
+{"level":"info","rid":"ad6fb9be-d1ed-4033-bf4c-913a59f43efb","method":"POST","path":"/reconcile","status":200,"dur":4.3513,"size":2521,"time":"2025-09-25T20:47:04+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":3.6944,"time":"2025-09-25T20:53:33+03:00","message":"reconcile done"}
+{"level":"info","rid":"d58a326c-7f3c-4cff-9e26-5d9210efc57d","method":"POST","path":"/reconcile","status":200,"dur":3.6944,"size":2521,"time":"2025-09-25T20:53:33+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":3.3528,"time":"2025-09-25T20:53:37+03:00","message":"reconcile done"}
+{"level":"info","rid":"4a7db5f9-fd8b-40a7-a30c-3bdee63374ea","method":"POST","path":"/reconcile","status":200,"dur":3.3528,"size":2521,"time":"2025-09-25T20:53:37+03:00","message":"http"}
+{"level":"info","time":"2025-09-25T21:02:12+03:00","message":"server shutting down"}
+{"level":"info","time":"2025-09-25T21:02:12+03:00","message":"bye"}
+{"level":"info","addr":"127.0.0.1:8082","time":"2025-09-25T21:02:15+03:00","message":"server starting"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":4.6814,"time":"2025-09-25T21:02:26+03:00","message":"reconcile done"}
+{"level":"info","rid":"158916f5-c3cd-4afb-a059-fcd66b6a0a89","method":"POST","path":"/reconcile","status":200,"dur":4.6814,"size":2521,"time":"2025-09-25T21:02:26+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":4.7019,"time":"2025-09-25T21:02:28+03:00","message":"reconcile done"}
+{"level":"info","rid":"44ee61f5-a033-4a5a-94dd-65314f04e597","method":"POST","path":"/reconcile","status":200,"dur":5.2253,"size":2521,"time":"2025-09-25T21:02:28+03:00","message":"http"}
+{"level":"info","time":"2025-09-25T21:06:06+03:00","message":"server shutting down"}
+{"level":"info","time":"2025-09-25T21:06:06+03:00","message":"bye"}
+{"level":"info","addr":"127.0.0.1:8082","time":"2025-09-25T21:06:09+03:00","message":"server starting"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":5.2884,"time":"2025-09-25T21:06:15+03:00","message":"reconcile done"}
+{"level":"info","rid":"7584e56a-3048-4382-8e72-03ba5e506483","method":"POST","path":"/reconcile","status":200,"dur":5.2884,"size":2521,"time":"2025-09-25T21:06:15+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":4.1099,"time":"2025-09-25T21:06:18+03:00","message":"reconcile done"}
+{"level":"info","rid":"241032fb-0c3a-406c-923b-02fd2c81ee53","method":"POST","path":"/reconcile","status":200,"dur":4.1099,"size":2521,"time":"2025-09-25T21:06:18+03:00","message":"http"}
+{"level":"info","time":"2025-09-25T21:08:18+03:00","message":"server shutting down"}
+{"level":"info","time":"2025-09-25T21:08:18+03:00","message":"bye"}
+{"level":"info","addr":"127.0.0.1:8082","time":"2025-09-25T21:08:20+03:00","message":"server starting"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":5.7439,"time":"2025-09-25T21:08:26+03:00","message":"reconcile done"}
+{"level":"info","rid":"d5b99305-a043-4891-b81e-5fd4e06ea826","method":"POST","path":"/reconcile","status":200,"dur":5.7439,"size":2521,"time":"2025-09-25T21:08:26+03:00","message":"http"}
+{"level":"info","time":"2025-09-25T21:14:30+03:00","message":"server shutting down"}
+{"level":"info","time":"2025-09-25T21:14:30+03:00","message":"bye"}
+{"level":"info","addr":"127.0.0.1:8082","time":"2025-09-25T21:14:32+03:00","message":"server starting"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":6.9171,"time":"2025-09-25T21:14:35+03:00","message":"reconcile done"}
+{"level":"info","rid":"a98a2265-c745-4eb0-a027-00faf66d0a67","method":"POST","path":"/reconcile","status":200,"dur":7.4833,"size":2521,"time":"2025-09-25T21:14:35+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":4.3331,"time":"2025-09-25T21:14:36+03:00","message":"reconcile done"}
+{"level":"info","rid":"cf749ba7-2726-4103-8a6b-a507ea3f8fe6","method":"POST","path":"/reconcile","status":200,"dur":4.3331,"size":2521,"time":"2025-09-25T21:14:36+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":3.7338,"time":"2025-09-25T21:14:36+03:00","message":"reconcile done"}
+{"level":"info","rid":"68ed7e7d-a945-40ad-9559-d6e4330cf60e","method":"POST","path":"/reconcile","status":200,"dur":4.2508,"size":2521,"time":"2025-09-25T21:14:36+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":4.1788,"time":"2025-09-25T21:14:36+03:00","message":"reconcile done"}
+{"level":"info","rid":"ed8e1dbb-d13f-426c-812b-314d58e25803","method":"POST","path":"/reconcile","status":200,"dur":4.1788,"size":2521,"time":"2025-09-25T21:14:36+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":4.2373,"time":"2025-09-25T21:14:37+03:00","message":"reconcile done"}
+{"level":"info","rid":"e255d78a-dd87-44f4-ae77-1ae2047e68ae","method":"POST","path":"/reconcile","status":200,"dur":4.7566,"size":2521,"time":"2025-09-25T21:14:37+03:00","message":"http"}
+{"level":"info","time":"2025-09-25T21:35:49+03:00","message":"server shutting down"}
+{"level":"info","time":"2025-09-25T21:35:49+03:00","message":"bye"}

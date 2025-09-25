@@ -8,92 +8,81 @@ import (
 )
 
 // индекс для быстрого поиска по B
-type indexB struct {
-    bySku  map[string][]model.Row
-    byName map[string][]model.Row
-    inv    map[string]map[string]struct{} // trigram -> set(normalized name)
+type Index struct {
+	bySku  map[string][]model.Row
+	byName map[string][]model.Row
+	inv    map[string]map[string]struct{} // trigram -> set(normalized name)
 }
 
 
-func buildIndexB(rows []model.Row) indexB {
-    idx := indexB{
-        bySku:  make(map[string][]model.Row),
-        byName: make(map[string][]model.Row),
-        inv:    make(map[string]map[string]struct{}),
-    }
-    for _, r := range rows {
-        if r.Sku != "" {
-            idx.bySku[r.Sku] = append(idx.bySku[r.Sku], r)
-        }
-        if r.NameNorm != "" {
-            nn := r.NameNorm
-            idx.byName[nn] = append(idx.byName[nn], r)
-            for _, g := range trigrams(nn) {
-                if idx.inv[g] == nil {
-                    idx.inv[g] = make(map[string]struct{})
-                }
-                idx.inv[g][nn] = struct{}{}
-            }
-        }
-    }
-    return idx
-}
-
-func trigrams(s string) []string {
-	rs := []rune(s)
-	if len(rs) < 3 {
-		return []string{string(rs)}
+func buildIndexB(rows []model.Row) *Index {
+	idx := &Index{
+		bySku:  make(map[string][]model.Row),
+		byName: make(map[string][]model.Row),
+		inv:    make(map[string]map[string]struct{}),
 	}
-	out := make([]string, 0, len(rs)-2)
-	for i := 0; i+2 < len(rs); i++ {
-		out = append(out, string(rs[i:i+3]))
+
+	for _, r := range rows {
+		if r.Sku != "" {
+			idx.bySku[r.Sku] = append(idx.bySku[r.Sku], r)
+		}
+		if r.NameNorm == "" {
+			continue
+		}
+		nn := r.NameNorm
+		idx.byName[nn] = append(idx.byName[nn], r)
+
+		for g := range trigramSet(nn) {
+			bucket, ok := idx.inv[g]
+			if !ok {
+				bucket = make(map[string]struct{})
+				idx.inv[g] = bucket
+			}
+			bucket[nn] = struct{}{}
+		}
 	}
-	return out
+
+	return idx
 }
+// service.go
 
 func trigramSet(s string) map[string]struct{} {
 	m := make(map[string]struct{})
 	if s == "" {
 		return m
 	}
-	// pad with spaces
 	p := " " + s + " "
-	runes := []rune(p)
-	if len(runes) < 3 {
+	r := []rune(p)
+	if len(r) < 3 {
 		m[p] = struct{}{}
 		return m
 	}
-	for i := 0; i <= len(runes)-3; i++ {
-		m[string(runes[i:i+3])] = struct{}{}
+	for i := 0; i <= len(r)-3; i++ {
+		m[string(r[i:i+3])] = struct{}{}
 	}
 	return m
 }
 
-func candidateNames(idx indexB, norm string) []string {
-	seen := make(map[string]int)
-	for tg := range trigramSet(norm) {
-		for name := range idx.inv[tg] {
-			seen[name]++
+func (idx *Index) candidateNames(norm string) []string {
+	if norm == "" {
+		return nil
+	}
+	seen := make(map[string]struct{})
+	for g := range trigramSet(norm) {
+		if bucket, ok := idx.inv[g]; ok {
+			for nn := range bucket {
+				seen[nn] = struct{}{}
+			}
 		}
 	}
-	// convert to slice; sort by hits desc for determinism
-	type kv struct{ name string; hits int }
-	arr := make([]kv, 0, len(seen))
-	for n, h := range seen {
-		arr = append(arr, kv{n, h})
+	out := make([]string, 0, len(seen))
+	for nn := range seen {
+		out = append(out, nn)
 	}
-	sort.Slice(arr, func(i, j int) bool {
-		if arr[i].hits != arr[j].hits {
-			return arr[i].hits > arr[j].hits
-		}
-		return arr[i].name < arr[j].name
-	})
-	out := make([]string, 0, len(arr))
-	for _, kv := range arr {
-		out = append(out, kv.name)
-	}
+	sort.Strings(out) // для детерминированного порядка
 	return out
 }
+
 
 func similarity(a, b string) float64 {
 	// normalized Damerau-Levenshtein similarity in [0..1]
