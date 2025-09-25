@@ -9,34 +9,34 @@ import (
 
 // индекс для быстрого поиска по B
 type indexB struct {
-    bySku  map[string][]model.Row
-    byName map[string][]model.Row
-    inv    map[string]map[string]struct{} // trigram -> set(normalized name)
+	bySku  map[string][]*model.Row
+	byName map[string][]*model.Row
+	inv    map[string]map[string]struct{} // trigram -> set(normalized name)
 }
 
-
 func buildIndexB(rows []model.Row) indexB {
-    idx := indexB{
-        bySku:  make(map[string][]model.Row),
-        byName: make(map[string][]model.Row),
-        inv:    make(map[string]map[string]struct{}),
-    }
-    for _, r := range rows {
-        if r.Sku != "" {
-            idx.bySku[r.Sku] = append(idx.bySku[r.Sku], r)
-        }
-        if r.NameNorm != "" {
-            nn := r.NameNorm
-            idx.byName[nn] = append(idx.byName[nn], r)
-            for _, g := range trigrams(nn) {
-                if idx.inv[g] == nil {
-                    idx.inv[g] = make(map[string]struct{})
-                }
-                idx.inv[g][nn] = struct{}{}
-            }
-        }
-    }
-    return idx
+	idx := indexB{
+		bySku:  make(map[string][]*model.Row),
+		byName: make(map[string][]*model.Row),
+		inv:    make(map[string]map[string]struct{}),
+	}
+	for i := range rows {
+		r := &rows[i]
+		if r.Sku != "" {
+			idx.bySku[r.Sku] = append(idx.bySku[r.Sku], r)
+		}
+		if r.NameNorm != "" {
+			nn := r.NameNorm
+			idx.byName[nn] = append(idx.byName[nn], r)
+			for _, g := range trigrams(nn) {
+				if idx.inv[g] == nil {
+					idx.inv[g] = make(map[string]struct{})
+				}
+				idx.inv[g][nn] = struct{}{}
+			}
+		}
+	}
+	return idx
 }
 
 func trigrams(s string) []string {
@@ -77,7 +77,10 @@ func candidateNames(idx indexB, norm string) []string {
 		}
 	}
 	// convert to slice; sort by hits desc for determinism
-	type kv struct{ name string; hits int }
+	type kv struct {
+		name string
+		hits int
+	}
 	arr := make([]kv, 0, len(seen))
 	for n, h := range seen {
 		arr = append(arr, kv{n, h})
