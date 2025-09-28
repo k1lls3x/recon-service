@@ -532,3 +532,352 @@
 {"level":"info","rid":"e255d78a-dd87-44f4-ae77-1ae2047e68ae","method":"POST","path":"/reconcile","status":200,"dur":4.7566,"size":2521,"time":"2025-09-25T21:14:37+03:00","message":"http"}
 {"level":"info","time":"2025-09-25T21:35:49+03:00","message":"server shutting down"}
 {"level":"info","time":"2025-09-25T21:35:49+03:00","message":"bye"}
+{"level":"info","addr":"127.0.0.1:8082","time":"2025-09-25T22:38:50+03:00","message":"server starting"}
+{"level":"info","rowsA":1932,"rowsB":11040,"elapsed":847362.1045,"time":"2025-09-25T22:53:01+03:00","message":"reconcile done"}
+{"level":"info","rid":"3c5c99df-ee72-4433-88bf-b0433695c705","method":"POST","path":"/reconcile","status":200,"dur":847363.6079,"size":1597238,"time":"2025-09-25T22:53:01+03:00","message":"http"}
+{"level":"info","time":"2025-09-25T23:04:58+03:00","message":"server shutting down"}
+{"level":"info","time":"2025-09-25T23:04:58+03:00","message":"bye"}
+{"level":"info","addr":"127.0.0.1:8082","time":"2025-09-25T23:08:30+03:00","message":"server starting"}
+{"level":"info","rowsA":1932,"rowsB":11040,"elapsed":28411.7981,"time":"2025-09-25T23:09:04+03:00","message":"reconcile done"}
+{"level":"info","rid":"404a473e-4694-4b10-a2e7-6a32577806b8","method":"POST","path":"/reconcile","status":200,"dur":28411.7981,"size":1597238,"time":"2025-09-25T23:09:04+03:00","message":"http"}
+{"level":"info","rowsA":1932,"rowsB":11040,"elapsed":28711.2754,"time":"2025-09-25T23:12:00+03:00","message":"reconcile done"}
+{"level":"info","rid":"a5e6da4f-c1c2-4cce-86db-c7025b300d9d","method":"POST","path":"/reconcile","status":200,"dur":28711.2754,"size":1597238,"time":"2025-09-25T23:12:00+03:00","message":"http"}
+{"level":"info","rowsA":1932,"rowsB":11040,"elapsed":32405.8815,"time":"2025-09-25T23:12:46+03:00","message":"reconcile done"}
+{"level":"info","rid":"97b69a86-d3d7-4cc7-b724-50dacfdfd70e","method":"POST","path":"/reconcile","status":200,"dur":32405.8815,"size":1597237,"time":"2025-09-25T23:12:46+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":2.0563,"time":"2025-09-25T23:14:43+03:00","message":"reconcile done"}
+{"level":"info","rid":"e883d81a-d874-448d-aa45-1230be758cab","method":"POST","path":"/reconcile","status":200,"dur":2.5784,"size":2226,"time":"2025-09-25T23:14:43+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":4.1447,"time":"2025-09-25T23:14:58+03:00","message":"reconcile done"}
+{"level":"info","rid":"e3ef45a8-e5b2-4dc8-a925-838d0e2a8936","method":"POST","path":"/reconcile","status":200,"dur":4.1447,"size":2226,"time":"2025-09-25T23:14:58+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":2.581,"time":"2025-09-25T23:15:00+03:00","message":"reconcile done"}
+{"level":"info","rid":"406eeba8-b594-4079-bfc5-f494d66e27ba","method":"POST","path":"/reconcile","status":200,"dur":2.581,"size":2226,"time":"2025-09-25T23:15:00+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":2.6311,"time":"2025-09-25T23:15:01+03:00","message":"reconcile done"}
+{"level":"info","rid":"acab3de1-f3fc-4356-b6e8-a9492ed5be4c","method":"POST","path":"/reconcile","status":200,"dur":2.6311,"size":2226,"time":"2025-09-25T23:15:01+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":2.5462,"time":"2025-09-25T23:15:01+03:00","message":"reconcile done"}
+{"level":"info","rid":"3eee9870-dd67-4ded-be19-4aa7e2a467b9","method":"POST","path":"/reconcile","status":200,"dur":3.0658,"size":2226,"time":"2025-09-25T23:15:01+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":3.0982,"time":"2025-09-25T23:15:02+03:00","message":"reconcile done"}
+{"level":"info","rid":"063d89ec-deda-40af-b15d-89a7f81fe2c5","method":"POST","path":"/reconcile","status":200,"dur":3.0982,"size":2226,"time":"2025-09-25T23:15:02+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":2.6817,"time":"2025-09-25T23:15:02+03:00","message":"reconcile done"}
+{"level":"info","rid":"ca886f98-a397-4d0f-af7b-3b8a7504b62c","method":"POST","path":"/reconcile","status":200,"dur":2.6817,"size":2226,"time":"2025-09-25T23:15:02+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":2.5793,"time":"2025-09-25T23:15:02+03:00","message":"reconcile done"}
+{"level":"info","rid":"c74ace0f-f8d2-4034-b105-a5a45a8525c1","method":"POST","path":"/reconcile","status":200,"dur":2.5793,"size":2226,"time":"2025-09-25T23:15:02+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":2.5665,"time":"2025-09-25T23:15:02+03:00","message":"reconcile done"}
+{"level":"info","rid":"ef17ca68-3230-4d19-97ca-f158363826d9","method":"POST","path":"/reconcile","status":200,"dur":3.0764,"size":2226,"time":"2025-09-25T23:15:02+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":2.7904,"time":"2025-09-25T23:15:02+03:00","message":"reconcile done"}
+{"level":"info","rid":"1981f766-e0b2-453d-827c-fb5731dd4c1a","method":"POST","path":"/reconcile","status":200,"dur":2.7904,"size":2226,"time":"2025-09-25T23:15:02+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":2.746,"time":"2025-09-25T23:15:03+03:00","message":"reconcile done"}
+{"level":"info","rid":"34f6dcaa-7a2d-4cf6-83a3-6dbcf3e61403","method":"POST","path":"/reconcile","status":200,"dur":3.2534,"size":2226,"time":"2025-09-25T23:15:03+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":2.8485,"time":"2025-09-25T23:15:03+03:00","message":"reconcile done"}
+{"level":"info","rid":"89c252a6-0e58-4a81-991d-cce35bde26a0","method":"POST","path":"/reconcile","status":200,"dur":3.3621,"size":2226,"time":"2025-09-25T23:15:03+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":5.2408,"time":"2025-09-25T23:15:03+03:00","message":"reconcile done"}
+{"level":"info","rid":"8b41a504-2542-42a2-be37-bbb32603e7f5","method":"POST","path":"/reconcile","status":200,"dur":5.2408,"size":2226,"time":"2025-09-25T23:15:03+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":3.423,"time":"2025-09-25T23:15:03+03:00","message":"reconcile done"}
+{"level":"info","rid":"f2610240-8ead-4180-814c-ce4d48a4eb6c","method":"POST","path":"/reconcile","status":200,"dur":3.423,"size":2226,"time":"2025-09-25T23:15:03+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":2.6038,"time":"2025-09-25T23:15:03+03:00","message":"reconcile done"}
+{"level":"info","rid":"cefd82f4-fa41-4872-9277-0b52306e0900","method":"POST","path":"/reconcile","status":200,"dur":2.6038,"size":2226,"time":"2025-09-25T23:15:03+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":2.5741,"time":"2025-09-25T23:15:03+03:00","message":"reconcile done"}
+{"level":"info","rid":"1296f245-5f1f-450c-baf9-00f4ccde6fad","method":"POST","path":"/reconcile","status":200,"dur":3.1023,"size":2226,"time":"2025-09-25T23:15:03+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":3.3765,"time":"2025-09-25T23:15:04+03:00","message":"reconcile done"}
+{"level":"info","rid":"7d483db2-ddc5-4914-a3a3-e2c4243e6684","method":"POST","path":"/reconcile","status":200,"dur":3.3765,"size":2226,"time":"2025-09-25T23:15:04+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":3.131,"time":"2025-09-25T23:15:04+03:00","message":"reconcile done"}
+{"level":"info","rid":"0cf52c76-c9be-4044-8130-374317f7fd81","method":"POST","path":"/reconcile","status":200,"dur":3.131,"size":2226,"time":"2025-09-25T23:15:04+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":3.3002,"time":"2025-09-25T23:15:06+03:00","message":"reconcile done"}
+{"level":"info","rid":"147710bf-3964-4964-90a3-66878017252b","method":"POST","path":"/reconcile","status":200,"dur":3.8112,"size":2225,"time":"2025-09-25T23:15:06+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":3.0873,"time":"2025-09-25T23:15:06+03:00","message":"reconcile done"}
+{"level":"info","rid":"55487a83-5480-43e0-9d00-6f1cbef4c1bc","method":"POST","path":"/reconcile","status":200,"dur":3.6028,"size":2225,"time":"2025-09-25T23:15:06+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":2.0516,"time":"2025-09-25T23:15:07+03:00","message":"reconcile done"}
+{"level":"info","rid":"e1759d40-9c47-4a00-afd5-459d0ebe42b1","method":"POST","path":"/reconcile","status":200,"dur":2.5664,"size":2230,"time":"2025-09-25T23:15:07+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":2.6508,"time":"2025-09-25T23:15:17+03:00","message":"reconcile done"}
+{"level":"info","rid":"01c0852c-5d3b-47b0-989f-e6da38f8542e","method":"POST","path":"/reconcile","status":200,"dur":3.2064,"size":2225,"time":"2025-09-25T23:15:17+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":2.9705,"time":"2025-09-25T23:15:23+03:00","message":"reconcile done"}
+{"level":"info","rid":"2ae772d2-ba8d-4229-94f3-169886026a7f","method":"POST","path":"/reconcile","status":200,"dur":2.9705,"size":2225,"time":"2025-09-25T23:15:23+03:00","message":"http"}
+{"level":"info","rowsA":10,"rowsB":11,"elapsed":3.6854,"time":"2025-09-25T23:15:36+03:00","message":"reconcile done"}
+{"level":"info","rid":"64114b1a-6492-49a9-b6f1-e52de4e942a4","method":"POST","path":"/reconcile","status":200,"dur":3.6854,"size":2220,"time":"2025-09-25T23:15:36+03:00","message":"http"}
+{"level":"info","rowsA":10,"rowsB":11,"elapsed":3.3954,"time":"2025-09-25T23:15:37+03:00","message":"reconcile done"}
+{"level":"info","rid":"4a148fa2-e747-4fb6-ab3f-2fc664985e57","method":"POST","path":"/reconcile","status":200,"dur":3.3954,"size":2220,"time":"2025-09-25T23:15:37+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":3.1715,"time":"2025-09-25T23:15:42+03:00","message":"reconcile done"}
+{"level":"info","rid":"ea30a6d8-91fa-4ebf-9dba-4be49b03e616","method":"POST","path":"/reconcile","status":200,"dur":3.1715,"size":2225,"time":"2025-09-25T23:15:42+03:00","message":"http"}
+{"level":"info","rowsA":0,"rowsB":0,"elapsed":20.1668,"time":"2025-09-25T23:17:01+03:00","message":"reconcile done"}
+{"level":"info","rid":"ba7d4fbb-47ce-4e29-9ac0-fdd66c76b9b8","method":"POST","path":"/reconcile","status":200,"dur":20.1668,"size":560,"time":"2025-09-25T23:17:01+03:00","message":"http"}
+{"level":"info","rowsA":0,"rowsB":0,"elapsed":20.8014,"time":"2025-09-25T23:17:05+03:00","message":"reconcile done"}
+{"level":"info","rid":"d145a003-dd22-4d28-a1be-36703032ffc6","method":"POST","path":"/reconcile","status":200,"dur":21.3096,"size":561,"time":"2025-09-25T23:17:05+03:00","message":"http"}
+{"level":"info","rowsA":0,"rowsB":0,"elapsed":40.3188,"time":"2025-09-25T23:17:15+03:00","message":"reconcile done"}
+{"level":"info","rid":"dc7660d2-5ad2-4b80-be41-c6177e2bd445","method":"POST","path":"/reconcile","status":200,"dur":40.3188,"size":561,"time":"2025-09-25T23:17:15+03:00","message":"http"}
+{"level":"info","rowsA":0,"rowsB":0,"elapsed":41.2932,"time":"2025-09-25T23:17:17+03:00","message":"reconcile done"}
+{"level":"info","rid":"319638e9-ce45-45bc-b4b1-4c863fd75519","method":"POST","path":"/reconcile","status":200,"dur":41.8129,"size":561,"time":"2025-09-25T23:17:17+03:00","message":"http"}
+{"level":"info","rowsA":0,"rowsB":0,"elapsed":39.7273,"time":"2025-09-25T23:17:21+03:00","message":"reconcile done"}
+{"level":"info","rid":"2cf50eca-10f1-4481-bcb9-d2aee8f30e7a","method":"POST","path":"/reconcile","status":200,"dur":39.7273,"size":561,"time":"2025-09-25T23:17:21+03:00","message":"http"}
+{"level":"info","rowsA":0,"rowsB":1682,"elapsed":111.3764,"time":"2025-09-25T23:17:33+03:00","message":"reconcile done"}
+{"level":"info","rid":"ddf59877-eed3-4b1f-8047-8d1ad01bcea3","method":"POST","path":"/reconcile","status":200,"dur":111.3764,"size":207007,"time":"2025-09-25T23:17:33+03:00","message":"http"}
+{"level":"info","rowsA":15,"rowsB":1682,"elapsed":156.3847,"time":"2025-09-25T23:17:58+03:00","message":"reconcile done"}
+{"level":"info","rid":"0eb9cb18-c05e-42a0-a7b6-9f693dd5c366","method":"POST","path":"/reconcile","status":200,"dur":156.3847,"size":208006,"time":"2025-09-25T23:17:58+03:00","message":"http"}
+{"level":"info","rowsA":15,"rowsB":1682,"elapsed":149.4841,"time":"2025-09-25T23:18:04+03:00","message":"reconcile done"}
+{"level":"info","rid":"665481a3-2132-414a-a9b5-326bea9a4e92","method":"POST","path":"/reconcile","status":200,"dur":149.4841,"size":208006,"time":"2025-09-25T23:18:04+03:00","message":"http"}
+{"level":"info","rowsA":15,"rowsB":1682,"elapsed":148.5497,"time":"2025-09-25T23:18:05+03:00","message":"reconcile done"}
+{"level":"info","rid":"c639029c-b82e-4d81-96c8-09f99b806fc3","method":"POST","path":"/reconcile","status":200,"dur":148.5497,"size":208006,"time":"2025-09-25T23:18:05+03:00","message":"http"}
+{"level":"info","rowsA":15,"rowsB":1682,"elapsed":169.4599,"time":"2025-09-25T23:18:05+03:00","message":"reconcile done"}
+{"level":"info","rid":"3af3c0ad-cd3e-4764-bce2-e84634e88cca","method":"POST","path":"/reconcile","status":200,"dur":169.4599,"size":208006,"time":"2025-09-25T23:18:05+03:00","message":"http"}
+{"level":"info","rowsA":15,"rowsB":1682,"elapsed":160.14,"time":"2025-09-25T23:18:06+03:00","message":"reconcile done"}
+{"level":"info","rid":"fb903f32-8595-4634-935e-9f26a325c724","method":"POST","path":"/reconcile","status":200,"dur":160.14,"size":208006,"time":"2025-09-25T23:18:06+03:00","message":"http"}
+{"level":"info","rowsA":15,"rowsB":1682,"elapsed":160.4899,"time":"2025-09-25T23:18:07+03:00","message":"reconcile done"}
+{"level":"info","rid":"d1c9c983-5ac8-4176-aaa6-d5ed71e9e0a5","method":"POST","path":"/reconcile","status":200,"dur":160.4899,"size":208006,"time":"2025-09-25T23:18:07+03:00","message":"http"}
+{"level":"info","time":"2025-09-25T23:32:02+03:00","message":"server shutting down"}
+{"level":"info","time":"2025-09-25T23:32:02+03:00","message":"bye"}
+{"level":"info","addr":"127.0.0.1:8082","time":"2025-09-26T15:04:07+03:00","message":"server starting"}
+{"level":"info","rowsA":10,"rowsB":10,"elapsed":5.4526,"time":"2025-09-26T15:04:11+03:00","message":"reconcile done"}
+{"level":"info","rid":"b85d5b21-f9c3-40ef-af4f-16ddf17d0043","method":"POST","path":"/reconcile","status":200,"dur":5.4526,"size":2234,"time":"2025-09-26T15:04:11+03:00","message":"http"}
+{"level":"info","rowsA":10,"rowsB":10,"elapsed":2.831,"time":"2025-09-26T15:25:15+03:00","message":"reconcile done"}
+{"level":"info","rid":"e5eb8432-2218-42ba-b597-f57d3ee4dbee","method":"POST","path":"/reconcile","status":200,"dur":3.3381,"size":2223,"time":"2025-09-26T15:25:15+03:00","message":"http"}
+{"level":"info","rowsA":10,"rowsB":10,"elapsed":3.1773,"time":"2025-09-26T15:48:58+03:00","message":"reconcile done"}
+{"level":"info","rid":"6b4c834b-2f18-432c-b60f-d4b644124ce9","method":"POST","path":"/reconcile","status":200,"dur":3.1773,"size":2234,"time":"2025-09-26T15:48:58+03:00","message":"http"}
+{"level":"info","rowsA":10,"rowsB":10,"elapsed":3.1107,"time":"2025-09-26T16:14:00+03:00","message":"reconcile done"}
+{"level":"info","rid":"1a952c1b-c8c4-4862-9519-969ac23179b0","method":"POST","path":"/reconcile","status":200,"dur":3.1107,"size":2234,"time":"2025-09-26T16:14:00+03:00","message":"http"}
+{"level":"info","rowsA":10,"rowsB":10,"elapsed":3.2138,"time":"2025-09-26T16:43:11+03:00","message":"reconcile done"}
+{"level":"info","rid":"157ce646-45db-4805-97ba-560945e93f8a","method":"POST","path":"/reconcile","status":200,"dur":3.7343,"size":2234,"time":"2025-09-26T16:43:11+03:00","message":"http"}
+{"level":"info","rowsA":10,"rowsB":10,"elapsed":2.6456,"time":"2025-09-26T16:46:01+03:00","message":"reconcile done"}
+{"level":"info","rid":"2e6c6325-8dd7-4f35-ada3-ae598d56bb45","method":"POST","path":"/reconcile","status":200,"dur":3.1619,"size":2225,"time":"2025-09-26T16:46:01+03:00","message":"http"}
+{"level":"info","rowsA":1932,"rowsB":11040,"elapsed":26588.4662,"time":"2025-09-26T16:52:33+03:00","message":"reconcile done"}
+{"level":"info","rid":"28966558-59d9-48da-9128-13fb48835c83","method":"POST","path":"/reconcile","status":200,"dur":26589.4645,"size":1597238,"time":"2025-09-26T16:52:33+03:00","message":"http"}
+{"level":"info","rowsA":1932,"rowsB":1682,"elapsed":3109.0221,"time":"2025-09-26T16:53:12+03:00","message":"reconcile done"}
+{"level":"info","rid":"6c6a15f6-0f09-4fcd-80f0-3b28e79f1b81","method":"POST","path":"/reconcile","status":200,"dur":3109.0221,"size":410582,"time":"2025-09-26T16:53:12+03:00","message":"http"}
+{"level":"info","rowsA":1932,"rowsB":15,"elapsed":133.517,"time":"2025-09-26T16:53:35+03:00","message":"reconcile done"}
+{"level":"info","rid":"c317ed20-e244-4d6c-bd29-084be849528a","method":"POST","path":"/reconcile","status":200,"dur":133.517,"size":207261,"time":"2025-09-26T16:53:35+03:00","message":"http"}
+{"level":"info","rowsA":1932,"rowsB":0,"elapsed":76.2791,"time":"2025-09-26T16:53:41+03:00","message":"reconcile done"}
+{"level":"info","rid":"e0049b53-9645-49c2-915d-b4aa90e75743","method":"POST","path":"/reconcile","status":200,"dur":76.2791,"size":205084,"time":"2025-09-26T16:53:41+03:00","message":"http"}
+{"level":"info","rowsA":1932,"rowsB":0,"elapsed":76.1128,"time":"2025-09-26T16:53:44+03:00","message":"reconcile done"}
+{"level":"info","rid":"80fc9110-267e-4fc0-a290-7933de801ffc","method":"POST","path":"/reconcile","status":200,"dur":76.1128,"size":205084,"time":"2025-09-26T16:53:44+03:00","message":"http"}
+{"level":"info","rowsA":1932,"rowsB":0,"elapsed":78.4158,"time":"2025-09-26T16:53:46+03:00","message":"reconcile done"}
+{"level":"info","rid":"90fb2020-4464-4225-bd5d-f4779ad3104e","method":"POST","path":"/reconcile","status":200,"dur":78.4158,"size":205084,"time":"2025-09-26T16:53:46+03:00","message":"http"}
+{"level":"info","rowsA":1932,"rowsB":0,"elapsed":77.8797,"time":"2025-09-26T16:53:48+03:00","message":"reconcile done"}
+{"level":"info","rid":"d1a7c7dc-c6ae-4166-928a-ac8199102614","method":"POST","path":"/reconcile","status":200,"dur":77.8797,"size":205084,"time":"2025-09-26T16:53:48+03:00","message":"http"}
+{"level":"info","rowsA":1932,"rowsB":15,"elapsed":138.6324,"time":"2025-09-26T16:53:54+03:00","message":"reconcile done"}
+{"level":"info","rid":"e745e661-47df-4cdd-b03e-f581a78775b6","method":"POST","path":"/reconcile","status":200,"dur":139.144,"size":207261,"time":"2025-09-26T16:53:54+03:00","message":"http"}
+{"level":"info","rowsA":1932,"rowsB":1682,"elapsed":2992.8204,"time":"2025-09-26T16:54:23+03:00","message":"reconcile done"}
+{"level":"info","rid":"ae0f1b86-3e23-4dd5-bde3-463bd1c16721","method":"POST","path":"/reconcile","status":200,"dur":2992.8204,"size":410582,"time":"2025-09-26T16:54:23+03:00","message":"http"}
+{"level":"info","rowsA":1932,"rowsB":11040,"elapsed":27080.141,"time":"2025-09-26T16:55:13+03:00","message":"reconcile done"}
+{"level":"info","rid":"92ffd9b2-22f3-4471-8533-44a99e152439","method":"POST","path":"/reconcile","status":200,"dur":27081.1456,"size":1597238,"time":"2025-09-26T16:55:13+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":3.12,"time":"2025-09-26T17:08:10+03:00","message":"reconcile done"}
+{"level":"info","rid":"85a90b89-6ca4-4311-a993-e4836440633a","method":"POST","path":"/reconcile","status":200,"dur":3.6346,"size":2297,"time":"2025-09-26T17:08:10+03:00","message":"http"}
+{"level":"info","time":"2025-09-26T17:16:48+03:00","message":"server shutting down"}
+{"level":"info","time":"2025-09-26T17:16:48+03:00","message":"bye"}
+{"level":"info","addr":"127.0.0.1:8082","time":"2025-09-26T20:56:31+03:00","message":"server starting"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":4.6219,"time":"2025-09-26T21:29:02+03:00","message":"reconcile done"}
+{"level":"info","rid":"25e74037-ded2-4215-a4b7-c0518cd95c59","method":"POST","path":"/reconcile","status":200,"dur":4.6219,"size":2226,"time":"2025-09-26T21:29:02+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":4.1281,"time":"2025-09-26T21:51:23+03:00","message":"reconcile done"}
+{"level":"info","rid":"fcd88a86-8ea4-44b4-ab8c-317b137e1a25","method":"POST","path":"/reconcile","status":200,"dur":4.1281,"size":2226,"time":"2025-09-26T21:51:23+03:00","message":"http"}
+{"level":"info","rowsA":10,"rowsB":11,"elapsed":3.106,"time":"2025-09-26T22:12:21+03:00","message":"reconcile done"}
+{"level":"info","rid":"95f9ad81-5f8d-438e-970c-97f669b20f47","method":"POST","path":"/reconcile","status":200,"dur":3.106,"size":2221,"time":"2025-09-26T22:12:21+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":2.5672,"time":"2025-09-26T22:59:06+03:00","message":"reconcile done"}
+{"level":"info","rid":"934a3207-8fc3-439a-b70f-222cdbc1b434","method":"POST","path":"/reconcile","status":200,"dur":3.0813,"size":2226,"time":"2025-09-26T22:59:06+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":3.1736,"time":"2025-09-26T23:00:15+03:00","message":"reconcile done"}
+{"level":"info","rid":"11acb5c6-88ce-46fc-b9a5-529e98c4f443","method":"POST","path":"/reconcile","status":200,"dur":3.6966,"size":2226,"time":"2025-09-26T23:00:15+03:00","message":"http"}
+{"level":"info","time":"2025-09-26T23:21:51+03:00","message":"server shutting down"}
+{"level":"info","time":"2025-09-26T23:21:51+03:00","message":"bye"}
+{"level":"info","addr":"127.0.0.1:8082","time":"2025-09-26T23:21:55+03:00","message":"server starting"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":4.1748,"time":"2025-09-26T23:22:06+03:00","message":"reconcile done"}
+{"level":"info","rid":"8a75b8db-9e17-40e1-8ef1-7f4a705cd8e6","method":"POST","path":"/reconcile","status":200,"dur":4.1748,"size":2527,"time":"2025-09-26T23:22:06+03:00","message":"http"}
+{"level":"info","time":"2025-09-26T23:22:20+03:00","message":"server shutting down"}
+{"level":"info","time":"2025-09-26T23:22:20+03:00","message":"bye"}
+{"level":"info","addr":"127.0.0.1:8082","time":"2025-09-26T23:22:21+03:00","message":"server starting"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":3.6464,"time":"2025-09-26T23:22:26+03:00","message":"reconcile done"}
+{"level":"info","rid":"1d55aeaa-14c5-4cc8-8464-cc3ffc5e8a5b","method":"POST","path":"/reconcile","status":200,"dur":4.1561,"size":2226,"time":"2025-09-26T23:22:26+03:00","message":"http"}
+{"level":"info","time":"2025-09-27T01:21:28+03:00","message":"server shutting down"}
+{"level":"info","time":"2025-09-27T01:21:28+03:00","message":"bye"}
+{"level":"info","addr":"127.0.0.1:8082","time":"2025-09-27T13:41:29+03:00","message":"server starting"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":4.1921,"time":"2025-09-27T13:41:30+03:00","message":"reconcile done"}
+{"level":"info","rid":"ae50cc89-6f7a-4660-bfdb-64ede4675a46","method":"POST","path":"/reconcile","status":200,"dur":4.1921,"size":2226,"time":"2025-09-27T13:41:30+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":2.6474,"time":"2025-09-27T14:20:14+03:00","message":"reconcile done"}
+{"level":"info","rid":"f670323e-02fa-4e9b-8e1c-3bbe4489c90d","method":"POST","path":"/reconcile","status":200,"dur":3.1661,"size":2226,"time":"2025-09-27T14:20:14+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":3.5762,"time":"2025-09-27T14:33:53+03:00","message":"reconcile done"}
+{"level":"info","rid":"59866582-ab47-4844-8d6c-cf08ac635dd4","method":"POST","path":"/reconcile","status":200,"dur":4.0946,"size":2226,"time":"2025-09-27T14:33:53+03:00","message":"http"}
+{"level":"info","rowsA":10,"rowsB":11,"elapsed":3.7528,"time":"2025-09-27T15:00:24+03:00","message":"reconcile done"}
+{"level":"info","rid":"955f3ac4-fbb0-4cb2-8409-9b8ddd6905dc","method":"POST","path":"/reconcile","status":200,"dur":4.2743,"size":2221,"time":"2025-09-27T15:00:24+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":2.569,"time":"2025-09-27T15:14:53+03:00","message":"reconcile done"}
+{"level":"info","rid":"52f811ca-cfa7-48a3-8bb2-e84d06799544","method":"POST","path":"/reconcile","status":200,"dur":2.569,"size":2225,"time":"2025-09-27T15:14:53+03:00","message":"http"}
+{"level":"info","rowsA":10,"rowsB":11,"elapsed":3.1682,"time":"2025-09-27T15:14:56+03:00","message":"reconcile done"}
+{"level":"info","rid":"fbd0c3c3-e073-4729-945f-42d7566dd7f0","method":"POST","path":"/reconcile","status":200,"dur":3.1682,"size":2220,"time":"2025-09-27T15:14:56+03:00","message":"http"}
+{"level":"info","rowsA":10,"rowsB":11,"elapsed":3.1306,"time":"2025-09-27T15:24:53+03:00","message":"reconcile done"}
+{"level":"info","rid":"2052c72e-1d72-46a7-b6fe-e71dff0e1024","method":"POST","path":"/reconcile","status":200,"dur":3.1306,"size":2220,"time":"2025-09-27T15:24:53+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":3.0516,"time":"2025-09-27T15:33:48+03:00","message":"reconcile done"}
+{"level":"info","rid":"deb48f96-81e3-48e4-852e-823c341fe514","method":"POST","path":"/reconcile","status":200,"dur":3.5703,"size":2226,"time":"2025-09-27T15:33:48+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":4.1872,"time":"2025-09-27T16:38:06+03:00","message":"reconcile done"}
+{"level":"info","rid":"26452bed-0dde-4de2-817e-5a791808871f","method":"POST","path":"/reconcile","status":200,"dur":4.1872,"size":2224,"time":"2025-09-27T16:38:06+03:00","message":"http"}
+{"level":"info","rowsA":0,"rowsB":0,"elapsed":22.1194,"time":"2025-09-27T16:53:21+03:00","message":"reconcile done"}
+{"level":"info","rid":"b87ed80c-e9b0-4179-b4b5-90cf08f837d7","method":"POST","path":"/reconcile","status":200,"dur":22.1194,"size":481,"time":"2025-09-27T16:53:21+03:00","message":"http"}
+{"level":"info","rowsA":11040,"rowsB":15,"elapsed":1054.9739,"time":"2025-09-27T17:23:51+03:00","message":"reconcile done"}
+{"level":"info","rid":"7ac6b26d-b351-42f4-9730-d6bc4cb9f5e8","method":"POST","path":"/reconcile","status":200,"dur":1055.4957,"size":1390032,"time":"2025-09-27T17:23:51+03:00","message":"http"}
+{"level":"info","rowsA":11040,"rowsB":15,"elapsed":1008.7766,"time":"2025-09-27T17:24:21+03:00","message":"reconcile done"}
+{"level":"info","rid":"b64e2421-dcd1-4b47-83e4-96360343a3dc","method":"POST","path":"/reconcile","status":200,"dur":1008.7766,"size":1394913,"time":"2025-09-27T17:24:21+03:00","message":"http"}
+{"level":"info","rowsA":11040,"rowsB":15,"elapsed":1030.4755,"time":"2025-09-27T17:24:38+03:00","message":"reconcile done"}
+{"level":"info","rid":"f4b3fa19-78e0-4cdc-a3df-e655e6c0af78","method":"POST","path":"/reconcile","status":200,"dur":1030.4755,"size":1394913,"time":"2025-09-27T17:24:38+03:00","message":"http"}
+{"level":"info","rowsA":11040,"rowsB":1932,"elapsed":25171.2235,"time":"2025-09-27T17:26:16+03:00","message":"reconcile done"}
+{"level":"info","rid":"39d7452d-a80b-4454-a682-f8275b0eabdf","method":"POST","path":"/reconcile","status":200,"dur":25171.2235,"size":1596558,"time":"2025-09-27T17:26:16+03:00","message":"http"}
+{"level":"info","rowsA":11040,"rowsB":1932,"elapsed":24629.3477,"time":"2025-09-27T17:28:06+03:00","message":"reconcile done"}
+{"level":"info","rid":"5df1da9c-646b-4878-8409-f94d94d5c3c5","method":"POST","path":"/reconcile","status":200,"dur":24629.3477,"size":1596559,"time":"2025-09-27T17:28:06+03:00","message":"http"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":3.6081,"time":"2025-09-27T17:30:30+03:00","message":"reconcile done"}
+{"level":"info","rid":"54fe24f0-ec58-413a-a114-3814e941fb5a","method":"POST","path":"/reconcile","status":200,"dur":4.129,"size":2487,"time":"2025-09-27T17:30:30+03:00","message":"http"}
+{"level":"info","rowsA":11040,"rowsB":1932,"elapsed":25595.1114,"time":"2025-09-27T17:32:19+03:00","message":"reconcile done"}
+{"level":"info","rid":"ce159b3a-ce30-4e51-817d-e9649f39b8c0","method":"POST","path":"/reconcile","status":200,"dur":25595.1114,"size":1597633,"time":"2025-09-27T17:32:19+03:00","message":"http"}
+{"level":"info","rowsA":11040,"rowsB":1932,"elapsed":28864.019,"time":"2025-09-27T17:34:30+03:00","message":"reconcile done"}
+{"level":"info","rid":"a6a1eea1-f9dd-4009-b9c0-c2acaa8b3f98","method":"POST","path":"/reconcile","status":200,"dur":28864.5239,"size":1597633,"time":"2025-09-27T17:34:30+03:00","message":"http"}
+{"level":"info","rowsA":11040,"rowsB":11040,"elapsed":1670.5622,"time":"2025-09-27T17:37:50+03:00","message":"reconcile done"}
+{"level":"info","rid":"682269fa-4e01-4c7c-b781-08472f6531c3","method":"POST","path":"/reconcile","status":200,"dur":1670.5622,"size":1857958,"time":"2025-09-27T17:37:50+03:00","message":"http"}
+{"level":"info","rowsA":0,"rowsB":1682,"elapsed":505.0105,"time":"2025-09-27T17:41:36+03:00","message":"reconcile done"}
+{"level":"info","rid":"b4274e3e-9f82-4f14-8ce2-066f53322b66","method":"POST","path":"/reconcile","status":200,"dur":505.0105,"size":207052,"time":"2025-09-27T17:41:36+03:00","message":"http"}
+{"level":"info","rowsA":11040,"rowsB":1682,"elapsed":16453.8633,"time":"2025-09-27T17:42:16+03:00","message":"reconcile done"}
+{"level":"info","rid":"d28742fc-0e24-41b2-bd4b-35a135d21808","method":"POST","path":"/reconcile","status":200,"dur":16454.3795,"size":1599182,"time":"2025-09-27T17:42:16+03:00","message":"http"}
+{"level":"info","rowsA":11040,"rowsB":1932,"elapsed":30089.1151,"time":"2025-09-27T17:43:43+03:00","message":"reconcile done"}
+{"level":"info","rid":"23f3009f-4d0d-4437-b20b-c105e1fcd5cc","method":"POST","path":"/reconcile","status":200,"dur":30089.1151,"size":1597243,"time":"2025-09-27T17:43:43+03:00","message":"http"}
+{"level":"info","rowsA":1932,"rowsB":11040,"elapsed":30284.4856,"time":"2025-09-27T17:45:14+03:00","message":"reconcile done"}
+{"level":"info","rid":"a82cea37-a477-417d-b381-c2e99fada44d","method":"POST","path":"/reconcile","status":200,"dur":30285.0007,"size":1597238,"time":"2025-09-27T17:45:14+03:00","message":"http"}
+{"level":"info","time":"2025-09-27T17:58:06+03:00","message":"server shutting down"}
+{"level":"info","time":"2025-09-27T17:58:06+03:00","message":"bye"}
+{"level":"info","addr":"127.0.0.1:8082","time":"2025-09-27T17:58:09+03:00","message":"server starting"}
+{"level":"info","rowsA":1932,"rowsB":11040,"elapsed":26261.4276,"time":"2025-09-27T17:58:52+03:00","message":"reconcile done"}
+{"level":"info","rid":"a4295f29-a0ae-435f-97bd-3801546f6848","method":"POST","path":"/reconcile","status":200,"dur":26261.4276,"size":1597238,"time":"2025-09-27T17:58:52+03:00","message":"http"}
+{"level":"info","rowsA":11040,"rowsB":1932,"elapsed":31226.0615,"time":"2025-09-27T18:02:55+03:00","message":"reconcile done"}
+{"level":"info","rid":"142f0be9-55f8-4d37-94b8-b00649f6c154","method":"POST","path":"/reconcile","status":200,"dur":31227.0624,"size":1597243,"time":"2025-09-27T18:02:55+03:00","message":"http"}
+{"level":"info","time":"2025-09-27T18:26:34+03:00","message":"server shutting down"}
+{"level":"info","time":"2025-09-27T18:26:34+03:00","message":"bye"}
+{"level":"info","addr":"127.0.0.1:8082","time":"2025-09-28T14:25:47+03:00","message":"server starting"}
+{"level":"info","rowsA":11040,"rowsB":1932,"elapsed":28817.0194,"time":"2025-09-28T14:28:20+03:00","message":"reconcile done"}
+{"level":"info","rid":"ae172c96-c726-4614-8c83-a6379cb60f06","method":"POST","path":"/reconcile","status":200,"dur":28818.0248,"size":1597243,"time":"2025-09-28T14:28:20+03:00","message":"http"}
+{"level":"info","time":"2025-09-28T14:48:56+03:00","message":"server shutting down"}
+{"level":"info","time":"2025-09-28T14:48:56+03:00","message":"bye"}
+{"level":"info","addr":"127.0.0.1:8082","time":"2025-09-28T14:48:58+03:00","message":"server starting"}
+{"level":"info","rowsA":11040,"rowsB":1932,"elapsed":75914.5789,"time":"2025-09-28T14:50:22+03:00","message":"reconcile done"}
+{"level":"info","rid":"7f30516c-3f6e-472f-ab7a-49e2096c6d07","method":"POST","path":"/reconcile","status":200,"dur":75914.5789,"size":1597243,"time":"2025-09-28T14:50:22+03:00","message":"http"}
+{"level":"info","rowsA":11040,"rowsB":1932,"elapsed":84884.1899,"time":"2025-09-28T14:54:35+03:00","message":"reconcile done"}
+{"level":"info","rid":"b21d2471-7d5c-406c-a35f-ac7e9acbffc5","method":"POST","path":"/reconcile","status":200,"dur":84884.7061,"size":1597238,"time":"2025-09-28T14:54:35+03:00","message":"http"}
+{"level":"info","time":"2025-09-28T14:58:29+03:00","message":"server shutting down"}
+{"level":"info","time":"2025-09-28T14:58:29+03:00","message":"bye"}
+{"level":"info","addr":"127.0.0.1:8082","time":"2025-09-28T14:58:32+03:00","message":"server starting"}
+{"level":"info","rowsA":11040,"rowsB":1932,"elapsed":73526.843,"time":"2025-09-28T15:00:09+03:00","message":"reconcile done"}
+{"level":"info","rid":"f83a06fb-c01d-4d29-8065-1684521b2b7c","method":"POST","path":"/reconcile","status":200,"dur":73527.8449,"size":1597057,"time":"2025-09-28T15:00:09+03:00","message":"http"}
+{"level":"info","rowsA":11040,"rowsB":1932,"elapsed":74695.0507,"time":"2025-09-28T15:06:09+03:00","message":"reconcile done"}
+{"level":"info","rid":"e73e1ed1-322c-4901-9890-a7957786456b","method":"POST","path":"/reconcile","status":200,"dur":74695.0507,"size":1597062,"time":"2025-09-28T15:06:09+03:00","message":"http"}
+{"level":"info","time":"2025-09-28T15:16:47+03:00","message":"server shutting down"}
+{"level":"info","time":"2025-09-28T15:16:47+03:00","message":"bye"}
+{"level":"info","addr":"127.0.0.1:8082","time":"2025-09-28T15:16:49+03:00","message":"server starting"}
+{"level":"info","rowsA":11040,"rowsB":1932,"elapsed":70079.0592,"time":"2025-09-28T15:18:10+03:00","message":"reconcile done"}
+{"level":"info","rid":"3f52b91c-d107-478e-b1b8-c02814bb50e0","method":"POST","path":"/reconcile","status":200,"dur":70079.0592,"size":1597062,"time":"2025-09-28T15:18:10+03:00","message":"http"}
+{"level":"info","time":"2025-09-28T15:19:42+03:00","message":"server shutting down"}
+{"level":"info","time":"2025-09-28T15:19:42+03:00","message":"bye"}
+{"level":"info","addr":"127.0.0.1:8082","time":"2025-09-28T15:19:44+03:00","message":"server starting"}
+{"level":"info","rowsA":11040,"rowsB":1932,"elapsed":69572.6947,"time":"2025-09-28T15:20:56+03:00","message":"reconcile done"}
+{"level":"info","rid":"2b140fc5-9ba3-4d2d-b30f-0c92a06f2925","method":"POST","path":"/reconcile","status":200,"dur":69574.2069,"size":1597062,"time":"2025-09-28T15:20:56+03:00","message":"http"}
+{"level":"info","time":"2025-09-28T15:24:48+03:00","message":"server shutting down"}
+{"level":"info","time":"2025-09-28T15:24:48+03:00","message":"bye"}
+{"level":"info","addr":"127.0.0.1:8082","time":"2025-09-28T15:24:51+03:00","message":"server starting"}
+{"level":"debug","b_rows":1932,"b_qty_gt0":181,"b_qty_eq0":1751,"b_qty_lt0":0,"b_name_key_resolved":"Номенклатура","b_qty_key_resolved":"Конечный остаток","b_rows_sample":[{"Name":"Основной склад","Sku":"","Qty":0,"NameNorm":""},{"Name":"КМЭ 2510 контактор магнитный","Sku":"","Qty":0,"NameNorm":""},{"Name":"Кнопка \"Пуск-Стоп\" красно-зел.","Sku":"","Qty":0,"NameNorm":""}],"time":"2025-09-28T15:24:56+03:00","message":"[DEBUG] B mapped stats"}
+{"level":"info","rowsA":11040,"rowsB":1932,"elapsed":71604.3778,"time":"2025-09-28T15:26:07+03:00","message":"reconcile done"}
+{"level":"info","rid":"627a50bc-0a18-4c41-bb9d-9ee10c736290","method":"POST","path":"/reconcile","status":200,"dur":71604.8917,"size":1597062,"time":"2025-09-28T15:26:07+03:00","message":"http"}
+{"level":"info","time":"2025-09-28T15:30:27+03:00","message":"server shutting down"}
+{"level":"info","time":"2025-09-28T15:30:27+03:00","message":"bye"}
+{"level":"info","addr":"127.0.0.1:8082","time":"2025-09-28T15:32:33+03:00","message":"server starting"}
+{"level":"debug","b_rows":1932,"b_qty_gt0":181,"b_qty_eq0":1751,"b_qty_lt0":0,"b_name_key_resolved":"Номенклатура","b_qty_key_resolved":"Конечный остаток","b_rows_sample":[{"Name":"Основной склад","Sku":"","Qty":0,"NameNorm":""},{"Name":"КМЭ 2510 контактор магнитный","Sku":"","Qty":0,"NameNorm":""},{"Name":"Кнопка \"Пуск-Стоп\" красно-зел.","Sku":"","Qty":0,"NameNorm":""}],"time":"2025-09-28T15:34:57+03:00","message":"[DEBUG] B mapped stats"}
+{"level":"info","rowsA":11040,"rowsB":1932,"elapsed":74215.4187,"time":"2025-09-28T15:36:11+03:00","message":"reconcile done"}
+{"level":"info","rid":"06ea87eb-6a3c-4209-9b04-d0c15ccad00b","method":"POST","path":"/reconcile","status":200,"dur":74215.4187,"size":1597062,"time":"2025-09-28T15:36:11+03:00","message":"http"}
+{"level":"info","time":"2025-09-28T15:47:40+03:00","message":"server shutting down"}
+{"level":"info","time":"2025-09-28T15:47:40+03:00","message":"bye"}
+{"level":"info","addr":"127.0.0.1:8082","time":"2025-09-28T15:47:42+03:00","message":"server starting"}
+{"level":"debug","b_rows":0,"b_qty_gt0":0,"b_qty_eq0":0,"b_qty_lt0":0,"b_name_key_resolved":"","b_qty_key_resolved":"","b_rows_sample":[],"time":"2025-09-28T15:47:49+03:00","message":"[DEBUG] B mapped stats"}
+{"level":"info","rowsA":11040,"rowsB":0,"elapsed":797.6309,"time":"2025-09-28T15:47:49+03:00","message":"reconcile done"}
+{"level":"info","rid":"4a499486-6100-4546-b4a4-89d6c6cd3533","method":"POST","path":"/reconcile","status":200,"dur":797.6309,"size":1392756,"time":"2025-09-28T15:47:49+03:00","message":"http"}
+{"level":"debug","b_rows":0,"b_qty_gt0":0,"b_qty_eq0":0,"b_qty_lt0":0,"b_name_key_resolved":"","b_qty_key_resolved":"","b_rows_sample":[],"time":"2025-09-28T15:53:31+03:00","message":"[DEBUG] B mapped stats"}
+{"level":"info","rowsA":11040,"rowsB":0,"elapsed":780.0564,"time":"2025-09-28T15:53:32+03:00","message":"reconcile done"}
+{"level":"info","rid":"e8a957ff-0db0-4364-82c6-27d6d01c4c18","method":"POST","path":"/reconcile","status":200,"dur":780.0564,"size":1392756,"time":"2025-09-28T15:53:32+03:00","message":"http"}
+{"level":"info","time":"2025-09-28T15:55:25+03:00","message":"server shutting down"}
+{"level":"info","time":"2025-09-28T15:55:25+03:00","message":"bye"}
+{"level":"info","addr":"127.0.0.1:8082","time":"2025-09-28T15:55:27+03:00","message":"server starting"}
+{"level":"debug","b_rows":0,"b_qty_gt0":0,"b_qty_eq0":0,"b_qty_lt0":0,"b_name_key_resolved":"Номенклатура","b_qty_key_resolved":"Конечный остаток","b_rows_sample":[],"time":"2025-09-28T15:55:29+03:00","message":"[DEBUG] B mapped stats"}
+{"level":"info","rowsA":11040,"rowsB":0,"elapsed":800.0987,"time":"2025-09-28T15:55:29+03:00","message":"reconcile done"}
+{"level":"info","rid":"9862df7c-31be-468e-b67a-3a2172ed491f","method":"POST","path":"/reconcile","status":200,"dur":800.0987,"size":1392756,"time":"2025-09-28T15:55:29+03:00","message":"http"}
+{"level":"debug","b_rows":0,"b_qty_gt0":0,"b_qty_eq0":0,"b_qty_lt0":0,"b_name_key_resolved":"Номенклатура","b_qty_key_resolved":"Конечный остаток","b_rows_sample":[],"time":"2025-09-28T15:55:32+03:00","message":"[DEBUG] B mapped stats"}
+{"level":"info","rowsA":11040,"rowsB":0,"elapsed":783.4521,"time":"2025-09-28T15:55:32+03:00","message":"reconcile done"}
+{"level":"info","rid":"e1189cb2-7e78-4b5b-9280-882516cd24ee","method":"POST","path":"/reconcile","status":200,"dur":783.4521,"size":1392756,"time":"2025-09-28T15:55:32+03:00","message":"http"}
+{"level":"debug","b_rows":0,"b_qty_gt0":0,"b_qty_eq0":0,"b_qty_lt0":0,"b_name_key_resolved":"Номенклатура","b_qty_key_resolved":"Конечный остаток","b_rows_sample":[],"time":"2025-09-28T15:56:28+03:00","message":"[DEBUG] B mapped stats"}
+{"level":"info","rowsA":11040,"rowsB":0,"elapsed":790.2933,"time":"2025-09-28T15:56:28+03:00","message":"reconcile done"}
+{"level":"info","rid":"d6f1c6f1-a782-4557-a19f-95ef38504f43","method":"POST","path":"/reconcile","status":200,"dur":790.2933,"size":1392756,"time":"2025-09-28T15:56:28+03:00","message":"http"}
+{"level":"info","time":"2025-09-28T15:57:06+03:00","message":"server shutting down"}
+{"level":"info","time":"2025-09-28T15:57:06+03:00","message":"bye"}
+{"level":"info","addr":"127.0.0.1:8082","time":"2025-09-28T15:57:09+03:00","message":"server starting"}
+{"level":"debug","b_rows":1932,"b_qty_gt0":181,"b_qty_eq0":1751,"b_qty_lt0":0,"b_name_key_resolved":"Номенклатура","b_qty_key_resolved":"Конечный остаток","b_rows_sample":[{"Name":"Основной склад","Sku":"","Qty":0,"NameNorm":""},{"Name":"КМЭ 2510 контактор магнитный","Sku":"","Qty":0,"NameNorm":""},{"Name":"Кнопка \"Пуск-Стоп\" красно-зел.","Sku":"","Qty":0,"NameNorm":""}],"time":"2025-09-28T15:57:12+03:00","message":"[DEBUG] B mapped stats"}
+{"level":"info","rowsA":11040,"rowsB":1932,"elapsed":72171.9307,"time":"2025-09-28T15:58:23+03:00","message":"reconcile done"}
+{"level":"info","rid":"eb8ce837-1e0a-4641-accc-e8d9339caa14","method":"POST","path":"/reconcile","status":200,"dur":72171.9307,"size":1597062,"time":"2025-09-28T15:58:23+03:00","message":"http"}
+{"level":"info","time":"2025-09-28T16:02:51+03:00","message":"server shutting down"}
+{"level":"info","time":"2025-09-28T16:02:51+03:00","message":"bye"}
+{"level":"info","addr":"127.0.0.1:8082","time":"2025-09-28T16:03:17+03:00","message":"server starting"}
+{"level":"debug","b_rows":1932,"b_qty_gt0":181,"b_qty_eq0":1751,"b_qty_lt0":0,"b_name_key_resolved":"Номенклатура / Основной склад","b_qty_key_resolved":"Конечный остаток","b_rows_sample":[{"Name":"Основной склад","Sku":"","Qty":0,"NameNorm":""},{"Name":"КМЭ 2510 контактор магнитный","Sku":"","Qty":0,"NameNorm":""},{"Name":"Кнопка \"Пуск-Стоп\" красно-зел.","Sku":"","Qty":0,"NameNorm":""}],"time":"2025-09-28T16:03:21+03:00","message":"[DEBUG] B mapped stats"}
+{"level":"info","rowsA":0,"rowsB":1932,"elapsed":2682.8663,"time":"2025-09-28T16:03:22+03:00","message":"reconcile done"}
+{"level":"info","rid":"1358f265-d570-4b80-9dad-56130f205360","method":"POST","path":"/reconcile","status":200,"dur":2682.8663,"size":204867,"time":"2025-09-28T16:03:22+03:00","message":"http"}
+{"level":"info","time":"2025-09-28T16:07:57+03:00","message":"server shutting down"}
+{"level":"info","time":"2025-09-28T16:07:57+03:00","message":"bye"}
+{"level":"info","addr":"127.0.0.1:8082","time":"2025-09-28T16:07:59+03:00","message":"server starting"}
+{"level":"debug","b_rows":1932,"b_qty_gt0":181,"b_qty_eq0":1751,"b_qty_lt0":0,"b_name_key_resolved":"Номенклатура / Основной склад","b_qty_key_resolved":"Конечный остаток","b_rows_sample":[{"Name":"Основной склад","Sku":"","Qty":0,"NameNorm":""},{"Name":"КМЭ 2510 контактор магнитный","Sku":"","Qty":0,"NameNorm":""},{"Name":"Кнопка \"Пуск-Стоп\" красно-зел.","Sku":"","Qty":0,"NameNorm":""}],"time":"2025-09-28T16:08:27+03:00","message":"[DEBUG] B mapped stats"}
+{"level":"info","rowsA":11040,"rowsB":1932,"elapsed":99624.1584,"time":"2025-09-28T16:09:41+03:00","message":"reconcile done"}
+{"level":"info","rid":"5eabdfce-6c84-4ba6-b4a8-a74c3c8a3d89","method":"POST","path":"/reconcile","status":200,"dur":99624.1584,"size":1596681,"time":"2025-09-28T16:09:41+03:00","message":"http"}
+{"level":"info","time":"2025-09-28T16:16:31+03:00","message":"server shutting down"}
+{"level":"info","time":"2025-09-28T16:16:31+03:00","message":"bye"}
+{"level":"info","addr":"127.0.0.1:8082","time":"2025-09-28T16:16:33+03:00","message":"server starting"}
+{"level":"debug","b_rows":1931,"b_qty_gt0":181,"b_qty_eq0":1750,"b_qty_lt0":0,"b_name_key_resolved":"Номенклатура / Основной склад","b_qty_key_resolved":"Конечный остаток","b_rows_sample":[{"Name":"КМЭ 2510 контактор магнитный","Sku":"","Qty":0,"NameNorm":""},{"Name":"Кнопка \"Пуск-Стоп\" красно-зел.","Sku":"","Qty":0,"NameNorm":""},{"Name":"Материалы","Sku":"","Qty":0,"NameNorm":""}],"time":"2025-09-28T16:16:43+03:00","message":"[DEBUG] B mapped stats"}
+{"level":"info","rowsA":11040,"rowsB":1931,"elapsed":77929.9336,"time":"2025-09-28T16:17:58+03:00","message":"reconcile done"}
+{"level":"info","rid":"7ce5210e-7cd2-46f5-827e-143744c527aa","method":"POST","path":"/reconcile","status":200,"dur":77929.9336,"size":1596591,"time":"2025-09-28T16:17:58+03:00","message":"http"}
+{"level":"info","time":"2025-09-28T16:24:42+03:00","message":"server shutting down"}
+{"level":"info","time":"2025-09-28T16:24:42+03:00","message":"bye"}
+{"level":"info","addr":"127.0.0.1:8082","time":"2025-09-28T16:24:44+03:00","message":"server starting"}
+{"level":"debug","b_rows":1932,"b_qty_gt0":181,"b_qty_eq0":1751,"b_qty_lt0":0,"b_name_key_resolved":"Номенклатура","b_qty_key_resolved":"Конечный остаток","b_rows_sample":[{"Name":"Основной склад","Sku":"","Qty":0,"NameNorm":""},{"Name":"КМЭ 2510 контактор магнитный","Sku":"","Qty":0,"NameNorm":""},{"Name":"Кнопка \"Пуск-Стоп\" красно-зел.","Sku":"","Qty":0,"NameNorm":""}],"time":"2025-09-28T16:24:47+03:00","message":"[DEBUG] B mapped stats"}
+{"level":"info","rowsA":11040,"rowsB":1932,"elapsed":75567.3049,"time":"2025-09-28T16:26:02+03:00","message":"reconcile done"}
+{"level":"info","rid":"142a5ba4-51d9-4252-a9d1-b5afa8cfa73a","method":"POST","path":"/reconcile","status":200,"dur":75567.3049,"size":1596681,"time":"2025-09-28T16:26:02+03:00","message":"http"}
+{"level":"info","time":"2025-09-28T16:33:20+03:00","message":"server shutting down"}
+{"level":"info","time":"2025-09-28T16:33:20+03:00","message":"bye"}
+{"level":"info","addr":"127.0.0.1:8082","time":"2025-09-28T16:48:12+03:00","message":"server starting"}
+{"level":"debug","b_rows":1932,"b_qty_gt0":181,"b_qty_eq0":1751,"b_qty_lt0":0,"b_name_key_resolved":"Номенклатура","b_qty_key_resolved":"Конечный остаток","b_rows_sample":[{"Name":"Основной склад","Sku":"","Qty":0,"NameNorm":""},{"Name":"КМЭ 2510 контактор магнитный","Sku":"","Qty":0,"NameNorm":""},{"Name":"Кнопка \"Пуск-Стоп\" красно-зел.","Sku":"","Qty":0,"NameNorm":""}],"time":"2025-09-28T16:48:26+03:00","message":"[DEBUG] B mapped stats"}
+{"level":"error","error":"write tcp 127.0.0.1:8082->127.0.0.1:51594: wsasend: An established connection was aborted by the software in your host machine.","time":"2025-09-28T16:49:42+03:00","message":"write json"}
+{"level":"info","rid":"bd18b95d-7d56-4c6f-9a17-5c8ec2c85017","method":"POST","path":"/reconcile","status":200,"dur":76167.8887,"size":3736,"time":"2025-09-28T16:49:42+03:00","message":"http"}
+{"level":"debug","b_rows":10,"b_qty_gt0":10,"b_qty_eq0":0,"b_qty_lt0":0,"b_name_key_resolved":"Name","b_qty_key_resolved":"Qty","b_rows_sample":[{"Name":"тетрАдь клетка 48л","Sku":"","Qty":118,"NameNorm":""},{"Name":"вода 0.5л питьевая ПЭТ-тара","Sku":"","Qty":200,"NameNorm":""},{"Name":"Молоко Фермер 3.2 %","Sku":"","Qty":70,"NameNorm":""}],"time":"2025-09-28T16:54:27+03:00","message":"[DEBUG] B mapped stats"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":4.593,"time":"2025-09-28T16:54:27+03:00","message":"reconcile done"}
+{"level":"info","rid":"41b9428b-3e0f-4ff8-b880-c9bba34c7777","method":"POST","path":"/reconcile","status":200,"dur":4.593,"size":2226,"time":"2025-09-28T16:54:27+03:00","message":"http"}
+{"level":"info","time":"2025-09-28T17:03:33+03:00","message":"server shutting down"}
+{"level":"info","time":"2025-09-28T17:03:33+03:00","message":"bye"}
+{"level":"info","addr":"127.0.0.1:8082","time":"2025-09-28T17:03:35+03:00","message":"server starting"}
+{"level":"debug","b_rows":10,"b_qty_gt0":10,"b_qty_eq0":0,"b_qty_lt0":0,"b_name_key_resolved":"Name","b_qty_key_resolved":"Qty","b_rows_sample":[{"Name":"тетрАдь клетка 48л","Sku":"","Qty":118,"NameNorm":""},{"Name":"вода 0.5л питьевая ПЭТ-тара","Sku":"","Qty":200,"NameNorm":""},{"Name":"Молоко Фермер 3.2 %","Sku":"","Qty":70,"NameNorm":""}],"time":"2025-09-28T17:03:39+03:00","message":"[DEBUG] B mapped stats"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":5.9083,"time":"2025-09-28T17:03:39+03:00","message":"reconcile done"}
+{"level":"info","rid":"f5f524ab-a617-4cf8-b408-5ab1f41f8a2f","method":"POST","path":"/reconcile","status":200,"dur":5.9083,"size":2226,"time":"2025-09-28T17:03:39+03:00","message":"http"}
+{"level":"debug","b_rows":10,"b_qty_gt0":10,"b_qty_eq0":0,"b_qty_lt0":0,"b_name_key_resolved":"Name","b_qty_key_resolved":"Qty","b_rows_sample":[{"Name":"тетрАдь клетка 48л","Sku":"","Qty":118,"NameNorm":""},{"Name":"вода 0.5л питьевая ПЭТ-тара","Sku":"","Qty":200,"NameNorm":""},{"Name":"Молоко Фермер 3.2 %","Sku":"","Qty":70,"NameNorm":""}],"time":"2025-09-28T17:03:42+03:00","message":"[DEBUG] B mapped stats"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":4.2486,"time":"2025-09-28T17:03:42+03:00","message":"reconcile done"}
+{"level":"info","rid":"98d1bd44-2134-4523-a8b0-a6c3173708ce","method":"POST","path":"/reconcile","status":200,"dur":4.2486,"size":2226,"time":"2025-09-28T17:03:42+03:00","message":"http"}
+{"level":"debug","b_rows":10,"b_qty_gt0":10,"b_qty_eq0":0,"b_qty_lt0":0,"b_name_key_resolved":"Name","b_qty_key_resolved":"Qty","b_rows_sample":[{"Name":"тетрАдь клетка 48л","Sku":"","Qty":118,"NameNorm":""},{"Name":"вода 0.5л питьевая ПЭТ-тара","Sku":"","Qty":200,"NameNorm":""},{"Name":"Молоко Фермер 3.2 %","Sku":"","Qty":70,"NameNorm":""}],"time":"2025-09-28T17:03:43+03:00","message":"[DEBUG] B mapped stats"}
+{"level":"info","rowsA":11,"rowsB":10,"elapsed":4.6616,"time":"2025-09-28T17:03:43+03:00","message":"reconcile done"}
+{"level":"info","rid":"5d6833f0-bc5b-47c9-bcaf-77341472788a","method":"POST","path":"/reconcile","status":200,"dur":5.1846,"size":2226,"time":"2025-09-28T17:03:43+03:00","message":"http"}
+{"level":"debug","b_rows":1932,"b_qty_gt0":181,"b_qty_eq0":1751,"b_qty_lt0":0,"b_name_key_resolved":"Номенклатура","b_qty_key_resolved":"Конечный остаток","b_rows_sample":[{"Name":"Основной склад","Sku":"","Qty":0,"NameNorm":""},{"Name":"КМЭ 2510 контактор магнитный","Sku":"","Qty":0,"NameNorm":""},{"Name":"Кнопка \"Пуск-Стоп\" красно-зел.","Sku":"","Qty":0,"NameNorm":""}],"time":"2025-09-28T17:04:53+03:00","message":"[DEBUG] B mapped stats"}
+{"level":"info","rowsA":10627,"rowsB":1932,"elapsed":97636.8524,"time":"2025-09-28T17:06:24+03:00","message":"reconcile done"}
+{"level":"info","rid":"7d6df961-ee2f-4f31-9402-358b3d1e11c0","method":"POST","path":"/reconcile","status":200,"dur":97637.8586,"size":1599011,"time":"2025-09-28T17:06:24+03:00","message":"http"}
+{"level":"debug","b_rows":1932,"b_qty_gt0":181,"b_qty_eq0":1751,"b_qty_lt0":0,"b_name_key_resolved":"Номенклатура","b_qty_key_resolved":"Конечный остаток","b_rows_sample":[{"Name":"Основной склад","Sku":"","Qty":0,"NameNorm":""},{"Name":"КМЭ 2510 контактор магнитный","Sku":"","Qty":0,"NameNorm":""},{"Name":"Кнопка \"Пуск-Стоп\" красно-зел.","Sku":"","Qty":0,"NameNorm":""}],"time":"2025-09-28T17:06:55+03:00","message":"[DEBUG] B mapped stats"}
+{"level":"info","rowsA":10627,"rowsB":1932,"elapsed":96095.366,"time":"2025-09-28T17:08:24+03:00","message":"reconcile done"}
+{"level":"info","rid":"f73844fb-9af3-401d-830f-d43e9c08249b","method":"POST","path":"/reconcile","status":200,"dur":96096.3671,"size":1599011,"time":"2025-09-28T17:08:24+03:00","message":"http"}
+{"level":"info","time":"2025-09-28T17:16:34+03:00","message":"server shutting down"}
+{"level":"info","time":"2025-09-28T17:16:34+03:00","message":"bye"}
+{"level":"info","addr":"127.0.0.1:8082","time":"2025-09-28T17:16:37+03:00","message":"server starting"}
+{"level":"debug","b_rows":1932,"b_qty_gt0":181,"b_qty_eq0":1751,"b_qty_lt0":0,"b_name_key_resolved":"Номенклатура","b_qty_key_resolved":"Конечный остаток","b_rows_sample":[{"Name":"Основной склад","Sku":"","Qty":0,"NameNorm":""},{"Name":"КМЭ 2510 контактор магнитный","Sku":"","Qty":0,"NameNorm":""},{"Name":"Кнопка \"Пуск-Стоп\" красно-зел.","Sku":"","Qty":0,"NameNorm":""}],"time":"2025-09-28T17:16:58+03:00","message":"[DEBUG] B mapped stats"}
+{"level":"info","rowsA":10627,"rowsB":1932,"elapsed":97322.3433,"time":"2025-09-28T17:18:28+03:00","message":"reconcile done"}
+{"level":"info","rid":"e605a236-ed09-4659-9122-d66fd781f65a","method":"POST","path":"/reconcile","status":200,"dur":97322.3433,"size":1599011,"time":"2025-09-28T17:18:28+03:00","message":"http"}
+{"level":"info","time":"2025-09-28T17:24:00+03:00","message":"server shutting down"}
+{"level":"info","time":"2025-09-28T17:24:00+03:00","message":"bye"}
+{"level":"info","addr":"127.0.0.1:8082","time":"2025-09-28T17:24:03+03:00","message":"server starting"}
+{"level":"debug","b_rows":1932,"b_qty_gt0":181,"b_qty_eq0":1751,"b_qty_lt0":0,"b_name_key_resolved":"Номенклатура","b_qty_key_resolved":"Конечный остаток","b_rows_sample":[{"Name":"Основной склад","Sku":"","Qty":0,"NameNorm":""},{"Name":"КМЭ 2510 контактор магнитный","Sku":"","Qty":0,"NameNorm":""},{"Name":"Кнопка \"Пуск-Стоп\" красно-зел.","Sku":"","Qty":0,"NameNorm":""}],"time":"2025-09-28T17:24:21+03:00","message":"[DEBUG] B mapped stats"}
+{"level":"info","rowsA":10627,"rowsB":1932,"elapsed":99673.5915,"time":"2025-09-28T17:25:53+03:00","message":"reconcile done"}
+{"level":"info","rid":"35f2c6be-78f3-4cf4-a350-a2dd82f982da","method":"POST","path":"/reconcile","status":200,"dur":99673.5915,"size":1599011,"time":"2025-09-28T17:25:53+03:00","message":"http"}
+{"level":"debug","b_rows":10627,"b_qty_gt0":9828,"b_qty_eq0":799,"b_qty_lt0":0,"b_name_key_resolved":"Номенклатура.Наименование","b_qty_key_resolved":"Конечный остаток","b_rows_sample":[{"Name":"TOWA APN 65-60 Аппликатор для наклеивания этикеток шириной до 60 мм","Sku":"","Qty":1,"NameNorm":""},{"Name":"Акриловый ценникодержатель L-образный, горизонтальный 90х60 мм","Sku":"","Qty":5,"NameNorm":""},{"Name":"Аппликатор для наклеивания этикеток TOWA APN-60, максимальная ширина этикетки 60мм","Sku":"","Qty":1,"NameNorm":""}],"time":"2025-09-28T17:29:23+03:00","message":"[DEBUG] B mapped stats"}
+{"level":"info","rowsA":1932,"rowsB":10627,"elapsed":73306.2434,"time":"2025-09-28T17:30:30+03:00","message":"reconcile done"}
+{"level":"info","rid":"193f02c6-869e-43c3-89ba-c16db7ecb5fd","method":"POST","path":"/reconcile","status":200,"dur":73306.2434,"size":1599007,"time":"2025-09-28T17:30:30+03:00","message":"http"}
+{"level":"info","time":"2025-09-28T17:43:45+03:00","message":"server shutting down"}
+{"level":"info","time":"2025-09-28T17:43:45+03:00","message":"bye"}
+{"level":"info","addr":"127.0.0.1:8082","time":"2025-09-28T17:50:04+03:00","message":"server starting"}
+{"level":"debug","b_rows":10627,"b_qty_gt0":9828,"b_qty_eq0":799,"b_qty_lt0":0,"b_name_key_resolved":"Номенклатура.Наименование","b_qty_key_resolved":"Конечный остаток","b_rows_sample":[{"Name":"TOWA APN 65-60 Аппликатор для наклеивания этикеток шириной до 60 мм","Sku":"","Qty":1,"NameNorm":""},{"Name":"Акриловый ценникодержатель L-образный, горизонтальный 90х60 мм","Sku":"","Qty":5,"NameNorm":""},{"Name":"Аппликатор для наклеивания этикеток TOWA APN-60, максимальная ширина этикетки 60мм","Sku":"","Qty":1,"NameNorm":""}],"time":"2025-09-28T17:50:18+03:00","message":"[DEBUG] B mapped stats"}
+{"level":"info","rowsA":1932,"rowsB":10627,"elapsed":81765.6897,"time":"2025-09-28T17:51:32+03:00","message":"reconcile done"}
+{"level":"info","rid":"7e23ba05-38ff-4228-bd50-b40e70e6c608","method":"POST","path":"/reconcile","status":200,"dur":81765.6897,"size":1486459,"time":"2025-09-28T17:51:32+03:00","message":"http"}
+{"level":"debug","b_rows":10627,"b_qty_gt0":9828,"b_qty_eq0":799,"b_qty_lt0":0,"b_name_key_resolved":"Номенклатура.Наименование","b_qty_key_resolved":"Конечный остаток","b_rows_sample":[{"Name":"TOWA APN 65-60 Аппликатор для наклеивания этикеток шириной до 60 мм","Sku":"","Qty":1,"NameNorm":""},{"Name":"Акриловый ценникодержатель L-образный, горизонтальный 90х60 мм","Sku":"","Qty":5,"NameNorm":""},{"Name":"Аппликатор для наклеивания этикеток TOWA APN-60, максимальная ширина этикетки 60мм","Sku":"","Qty":1,"NameNorm":""}],"time":"2025-09-28T17:51:58+03:00","message":"[DEBUG] B mapped stats"}
+{"level":"info","rowsA":1932,"rowsB":10627,"elapsed":88108.4925,"time":"2025-09-28T17:53:18+03:00","message":"reconcile done"}
+{"level":"info","rid":"f7407246-4df8-49ea-ac68-4f26a1b36669","method":"POST","path":"/reconcile","status":200,"dur":88108.4925,"size":1486459,"time":"2025-09-28T17:53:18+03:00","message":"http"}
+{"level":"info","time":"2025-09-28T18:01:27+03:00","message":"server shutting down"}
+{"level":"info","time":"2025-09-28T18:01:27+03:00","message":"bye"}

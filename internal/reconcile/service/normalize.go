@@ -4,143 +4,175 @@ import (
 	"regexp"
 	"sort"
 	"strings"
-
-	"recon-service/internal/reconcile/model"
+	"unicode"
+	"strconv"
 )
 
-// Латиница→кириллица (визуальные двойники)
-var lookalikes = map[rune]rune{
-	'A': 'А', 'B': 'В', 'C': 'С', 'E': 'Е', 'H': 'Н', 'K': 'К', 'M': 'М', 'O': 'О', 'P': 'Р', 'T': 'Т', 'X': 'Х', 'Y': 'У',
-	'a': 'а', 'c': 'с', 'e': 'е', 'o': 'о', 'p': 'р', 'x': 'х',
-  'm':'м', 'L':'Л', 'l':'л', 'y':'у', 'k':'к',
+// --- базовая нормализация текста ---
+
+var spaceCleaner = strings.NewReplacer(
+	"\u00A0", " ", // NBSP
+	"\u202F", " ", // NNBSP (узкий NBSP)
+	"\u2007", " ", // FIGURE SPACE
+	"\t", " ",
+	"\r\n", "\n",
+	"\r", "\n",
+)
+
+func toLowerRu(s string) string {
+	s = strings.ToLower(s)
+	s = strings.ReplaceAll(s, "ё", "е")
+	return s
 }
 
-// Разрешаем буквы/цифры/пробелы + десятичные разделители и проценты
+// --- извлечение и унификация размеров ---
 
-// 0,5 → 0.5
-var decComma = regexp.MustCompile(`(\d),(\d)`)
+// 1200x800, 1200х800, 1200×800, 1200*800, + необязательная третья грань и суффикс мм/mm
+var reDim = regexp.MustCompile(`(?i)\b(\d{2,5})\s*[xх×\*]\s*(\d{2,5})(?:\s*[xх×\*]\s*(\d{1,5}))?\s*(?:мм|mm)?\b`)
 
-// Единицы измерения (используются и для склейки, и для вырезания отдельных токенов)
-const unitWord = `мл|л|кг|г|мг|мм|см|м|шт|%`
+// normalizeDims возвращает нормализованный токен размера (пример: "1200x800")
+// Если находит 3-мерный размер, возвращает первые две грани — этого обычно достаточно для паллетов.
+func normalizeDims(s string) (dim string, out string) {
+	out = s
+	m := reDim.FindStringSubmatch(s)
+	if len(m) >= 3 {
+		a := strings.TrimLeft(m[1], "0")
+		b := strings.TrimLeft(m[2], "0")
+		if a == "" { a = "0" }
+		if b == "" { b = "0" }
+		dim = a + "x" + b
+		// вырезаем исходный фрагмент размера из строки, чтобы не мешал токенизации
+		out = strings.Replace(s, m[0], " ", 1)
+	}
+	return dim, strings.TrimSpace(out)
+}
 
-// СКЛЕЙКА: "48 мм" → "48мм", "3.2  %" → "3.2%"
-// (делаем итеративно на всей строке)
-var reAttachNumUnit = regexp.MustCompile(`(?i)\b(\d+(?:[.,]\d+)?)(\s*)(` + unitWord + `)\b`)
+// --- синонимы/канонизация товарных слов ---
 
-// ВЫРЕЗАНИЕ ОТДЕЛЬНЫХ токенов-единиц (если включен StripUnits)
-// (склеенные пары "48мм" не затрагиваются)
-var reUnitTokens = regexp.MustCompile(`(?i)\b(` + unitWord + `)\b`)
+// единичные замены токенов
+var tokenSynonyms = map[string]string{
+	// базовые синонимы для контекста паллет/поддонов
+	"паллет":   "поддон",
+	"палета":   "поддон",
+	"паллета":  "поддон",
+	"паллетта": "поддон",
+	"палет":    "поддон",
+	// ед. изм. и мусор — выкинем позже как стоп-слова, но на всякий случай канонизируем
+	"шт.": "шт",
+	"л.":  "л",
+}
 
+// выражения «евро поддон» в любых формах → один токен "европоддон"
+var reEuroPoddon1 = regexp.MustCompile(`\bевро\s*[-\s]*поддон\b`)
+var reEuroPoddon2 = regexp.MustCompile(`\bподдон\s*[-\s]*евро\b`)
+var reEuroPoddon3 = regexp.MustCompile(`\bевроподдон\b`)
 
-var numUnitRx = regexp.MustCompile(`(?i)(\d+(?:[.,]\d+)?)\s*(мм|см|мл|л|кг|г|шт|%)\b`)
-// === normalize — главный конвейер ===
-func normalize(s string, opt model.Options) string {
-	if s == "" {
+// стоп-слова, не влияющие на сущность
+var stop = map[string]struct{}{
+	"мм": {}, "mm": {}, "шт": {}, "уп": {}, "упак": {}, "ед": {}, "изм": {},
+}
+
+// --- токенизация с учётом кириллицы и цифр ---
+
+func splitTokens(s string) []string {
+	sb := strings.Builder{}
+	tokens := []string{}
+	flush := func() {
+		if sb.Len() == 0 {
+			return
+		}
+		t := sb.String()
+		sb.Reset()
+		tokens = append(tokens, t)
+	}
+	for _, r := range s {
+		switch {
+		case unicode.IsLetter(r), unicode.IsDigit(r):
+			// кириллица/латиница/цифры — ок
+			sb.WriteRune(r)
+		case r == 'x': // оставим 'x' как часть размеров, но тут таких уже нет (мы их вырезали ранее)
+			sb.WriteRune(r)
+		default:
+			flush()
+		}
+	}
+	flush()
+	return tokens
+}
+
+// --- публичная функция нормализации названия ---
+
+// NameKey строит порядконезависимый нормализованный ключ номенклатуры.
+// Примеры (все дадут один ключ):
+//  - "Поддон Евро 1200х800мм"
+//  - "Европоддон 1200×800"
+//  - "евро-поддон 1200*800 мм"
+//  => "1200x800 европоддон"
+func NameKey(raw string) string {
+	if raw == "" {
 		return ""
 	}
-	s = numUnitRx.ReplaceAllString(s, `$1$2`)
-	out := s
 
-	// 1) Унификация символов: ё→е, лат↔кир, спец-разделители → пробел
-	if opt.Unify {
-		out = unifyLookalikes(out)
-	}
+	// 1) базовая чистка
+	s := spaceCleaner.Replace(raw)
+	s = toLowerRu(s)
+	// унификация знака размера: кириллическая 'х', умножение '×' → латинская 'x'
+	s = strings.NewReplacer("х", "x", "×", "x", "X", "x").Replace(s)
+	s = strings.TrimSpace(s)
 
-	// 2) Регистр
-	if opt.Lowercase {
-		out = strings.ToLower(out)
-	}
+	// 2) вытащим размер
+	dim, rest := normalizeDims(s)
 
-	// 3) Десятичные: 3,2 → 3.2 (делаем ДО чистки пунктуации)
-	out = decComma.ReplaceAllString(out, "$1.$2")
+	// 3) Канонизируем "европоддон"
+	rest = reEuroPoddon1.ReplaceAllString(rest, "европоддон")
+	rest = reEuroPoddon2.ReplaceAllString(rest, "европоддон")
+	// Если слово склеено, оставим как есть (редко встречается с дефисами/без пробела)
+	rest = strings.ReplaceAll(rest, "евро-поддон", "европоддон")
 
-	// 4) Очищаем пунктуацию, но сохраняем . , %
-	if opt.Normalization {
-		out = removePunctToSpaces(out)
-	} else {
-		out = collapseSpaces(out)
-	}
+	// 4) Токенизация и синонимы
+	rawTokens := splitTokens(rest)
+	tokens := make([]string, 0, len(rawTokens)+1)
 
-	// 5) СКЛЕЙКА "число + единица": "48 мм"→"48мм", "3.2 %"→"3.2%"
-	out = attachNumberUnitsEverywhere(out)
-
-
-	// 6a) Убираем слабые слова, не несущие номенклатурный смысл
-	weakRx := regexp.MustCompile(`(?i)\b(тара|упаковоч\w*|уп\.)\b`)
-	out = weakRx.ReplaceAllString(out, " ")
-// 6) Опционально удаляем ОТДЕЛЬНЫЕ единицы (склеенные не трогаем)
-	if opt.StripUnits {
-		out = stripUnitTokens(out)
-	}
-
-	// 7) Сортировка токенов (после склейки пары остаются единым токеном)
-	if opt.TokenSort {
-		out = tokenSort(out)
-	}
-
-	return strings.TrimSpace(out)
-}
-
-// ===== helpers =====
-
-// Ё→Е, лат↔кир по lookalikes, ×/*/x/· → пробел
-func unifyLookalikes(s string) string {
-	b := make([]rune, 0, len(s))
-	for _, r := range s {
-		switch r {
-		case 'ё':
-			r = 'е'
-		case 'Ё':
-			r = 'Е'
-		case '×', '*', 'x', 'X', '·':
-			r = ' '
-		default:
-			if rr, ok := lookalikes[r]; ok {
-				r = rr
-			}
+	seen := map[string]struct{}{}
+	add := func(t string) {
+		if t == "" {
+			return
 		}
-		b = append(b, r)
+		if _, bad := stop[t]; bad {
+			return
+		}
+		if _, ok := seen[t]; ok {
+			return
+		}
+		seen[t] = struct{}{}
+		tokens = append(tokens, t)
 	}
-	return string(b)
-}
 
-var punct = regexp.MustCompile(`[^\p{L}\p{N}\s.,%]+`) // разрешаем . , %
-func removePunctToSpaces(s string) string {
-  return collapseSpaces(punct.ReplaceAllString(s, " "))
-}
-// Итеративная СКЛЕЙКА "число + единица" по всей строке
-func attachNumberUnitsEverywhere(s string) string {
-    return extractNumUnitRx.ReplaceAllString(s, "$1$2")
-}
-// Убираем ЕДИНИЦЫ, если они стоят ОТДЕЛЬНЫМИ токенами
-// (склеенные пары типа "48мм" остаются)
-func stripUnitTokens(s string) string {
-	return collapseSpaces(reUnitTokens.ReplaceAllString(s, " "))
-}
+	for _, t := range rawTokens {
+		if rep, ok := tokenSynonyms[t]; ok {
+			t = rep
+		}
+		// склеенные варианты "европоддон" уже превращены выше, проверим ещё раз
+		if reEuroPoddon3.MatchString(t) {
+			t = "европоддон"
+		}
+		// выкинем чисто цифровые хвосты, которые уже «ушли» в размер
+		if _, err := strconv.Atoi(t); err == nil {
+			continue
+		}
+		add(t)
+	}
 
-// Лексикографическая сортировка токенов
-func tokenSort(s string) string {
-	f := strings.Fields(s)
-	sort.Strings(f)
-	return strings.Join(f, " ")
-}
+	// 5) Добавим размер отдельным токеном (если был)
+	if dim != "" {
+		add(dim)
+	}
 
-// Схлопывание пробелов
-func collapseSpaces(s string) string {
-	return strings.Join(strings.Fields(s), " ")
-}
+	if len(tokens) == 0 {
+		return ""
+	}
 
-// Мультимножество склеенных "число+единица" для гарда fuzzy (используй в service.go)
-var extractNumUnitRx = regexp.MustCompile(`(?i)(\d+(?:[.,]\d+)?)\s*(мм|см|мл|л|м|кг|г|шт|%)`)
-
-func extractNumUnits(s string) []string {
-    xs := extractNumUnitRx.FindAllStringSubmatch(s, -1)
-    out := make([]string, 0, len(xs))
-    for _, m := range xs {
-        num := strings.ReplaceAll(m[1], ",", ".") // <— приводим 0,5 → 0.5
-        unit := strings.ToLower(m[2])
-        out = append(out, num+unit)
-    }
-    sort.Strings(out)
-    return out
+	// 6) Порядконезависимый ключ
+	sort.Strings(tokens)
+	return strings.Join(tokens, " ")
 }

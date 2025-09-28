@@ -3,6 +3,7 @@ package service
 import (
 	"math"
 	"sort"
+	"strings"
 
 	"recon-service/internal/reconcile/model"
 )
@@ -13,7 +14,6 @@ type Index struct {
 	byName map[string][]model.Row
 	inv    map[string]map[string]struct{} // trigram -> set(normalized name)
 }
-
 
 func buildIndexB(rows []model.Row) *Index {
 	idx := &Index{
@@ -44,8 +44,8 @@ func buildIndexB(rows []model.Row) *Index {
 
 	return idx
 }
-// service.go
 
+// service.go
 func trigramSet(s string) map[string]struct{} {
 	m := make(map[string]struct{})
 	if s == "" {
@@ -83,7 +83,6 @@ func (idx *Index) candidateNames(norm string) []string {
 	return out
 }
 
-
 func similarity(a, b string) float64 {
 	// normalized Damerau-Levenshtein similarity in [0..1]
 	if a == "" && b == "" {
@@ -101,6 +100,16 @@ func similarity(a, b string) float64 {
 		return 1
 	}
 	return 1 - float64(d)/float64(m)
+}
+
+// tokenSort: сортируем токены по алфавиту (устойчиво к порядку слов)
+func tokenSort(s string) string {
+	if s == "" {
+		return s
+	}
+	t := strings.Fields(s)
+	sort.Strings(t)
+	return strings.Join(t, " ")
 }
 
 func tokenSortSimilarity(a, b string) float64 {

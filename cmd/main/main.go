@@ -7,12 +7,17 @@ import (
 	"os/signal"
 	"syscall"
 	"time"
-
+"runtime"
+			_ "net/http/pprof"
 	"recon-service/internal/config"
 	serverhttp "recon-service/server/http"
 )
 
 func main() {
+		if runtime.GOMAXPROCS(0) < runtime.NumCPU() {
+		runtime.GOMAXPROCS(runtime.NumCPU())
+	}
+	
 	cfg := config.Load()
 	logger := config.SetupLogger(cfg)
 

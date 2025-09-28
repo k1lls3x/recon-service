@@ -24,7 +24,7 @@ func Load() Config {
 		Host:         getenv("HOST", "127.0.0.1"),
 		Port:         port,
 		AllowOrigins: origins,
-		LogLevel:     getenv("LOG_LEVEL", "info"),
+		LogLevel:     getenv("LOG_LEVEL", "debug"),
 		MaxUploadMB:  mb,
 		LogFile:      getenv("LOG_FILE", "logs/recon-service.log"),
 	}

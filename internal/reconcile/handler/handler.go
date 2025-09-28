@@ -18,7 +18,7 @@ import (
 
 // Reconcile возвращает http.HandlerFunc, чтобы вы могли вызвать его как
 // r.Post("/reconcile", recHnd.Reconcile(cfg, logger)) в роутере.
-func Reconcile(cfg config.Config, logger zerolog.Logger) http.HandlerFunc {
+func  Reconcile(cfg config.Config, logger zerolog.Logger) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		start := time.Now()
 
@@ -33,7 +33,7 @@ func Reconcile(cfg config.Config, logger zerolog.Logger) http.HandlerFunc {
 		if reqID != "" {
 			log = logger.With().Str("req_id", reqID).Logger()
 		}
-
+		debug := true
 		defer r.Body.Close()
 		if err := r.ParseMultipartForm(200 << 20); err != nil { // 200MB
 			http.Error(w, "bad multipart form: "+err.Error(), http.StatusBadRequest)
@@ -101,7 +101,40 @@ opt := model.Options{
 		// В модельные строки + фильтр шапок
 		aRows := toRowsFiltered(rowsA, ma)
 		bRows := toRowsFiltered(rowsB, mb)
+if debug {
+    // статистика распарсенных количеств в B
+    gt0, eq0, lt0 := 0, 0, 0
+    for _, r := range bRows {
+        switch {
+        case r.Qty > 0: gt0++
+        case r.Qty < 0: lt0++
+        default: eq0++
+        }
+    }
 
+    // покажем, какие реальные ключи мы использовали для маппинга в B
+    // (берём по первой сырой записи rowsB, чтобы увидеть совпадение имён)
+    bNameKeyResolved, bQtyKeyResolved := "", ""
+    if len(rowsB) > 0 {
+        bNameKeyResolved = resolveKey(rowsB[0], ma.NameKey) // опечатка была бы — но мы хотим mb
+        bNameKeyResolved = resolveKey(rowsB[0], mb.NameKey)
+        bQtyKeyResolved  = resolveKey(rowsB[0], mb.QtyKey)
+    }
+
+    // небольшой сэмпл уже нормализованных строк B
+    sample := make([]model.Row, 0, 3)
+    for i := 0; i < len(bRows) && i < 3; i++ { sample = append(sample, bRows[i]) }
+
+    log.Debug().
+        Int("b_rows", len(bRows)).
+        Int("b_qty_gt0", gt0).
+        Int("b_qty_eq0", eq0).
+        Int("b_qty_lt0", lt0).
+        Str("b_name_key_resolved", bNameKeyResolved).
+        Str("b_qty_key_resolved", bQtyKeyResolved).
+        Interface("b_rows_sample", sample).
+        Msg("[DEBUG] B mapped stats")
+}
 		// Запуск сверки
 		res := recSvc.Run(aRows, bRows, opt)
 
@@ -126,27 +159,6 @@ opt := model.Options{
 			Dur("elapsed", time.Since(start)).
 			Msg("reconcile done")
 	}
-}
-
-func toRowsFiltered(maps []map[string]string, m model.Mapping) []model.Row {
-	rows := make([]model.Row, 0, len(maps))
-	for _, rec := range maps {
-		// эвристика — пропустить строки, похожие на шапку
-		if looksLikeHeaderMap(rec) {
-			continue
-		}
-		name := strings.TrimSpace(rec[m.NameKey])
-		if name == "" {
-			continue
-		}
-		qty := toNumber(rec[m.QtyKey])
-		sku := ""
-		if m.UseSku && m.SkuKey != "" {
-			sku = strings.TrimSpace(rec[m.SkuKey])
-		}
-		rows = append(rows, model.Row{Name: name, Sku: sku, Qty: qty})
-	}
-	return rows
 }
 
 func looksLikeHeaderMap(m map[string]string) bool {

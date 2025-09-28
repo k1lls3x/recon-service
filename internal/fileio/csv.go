@@ -45,6 +45,9 @@ func readCSV(r io.Reader, headerRow int) ([]map[string]string, error) {
 		if err != nil {
 			return nil, err
 		}
+		for i := range rec {
+			rec[i] = normalizeCell(rec[i]) // нормализация как в xls/xlsx
+		}
 		rows = append(rows, rec)
 	}
 	if len(rows) == 0 {
